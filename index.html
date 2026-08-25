@@ -1,0 +1,619 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sightro - Make your property website part of your sales team</title>
+    <meta name="description" content="Sightro is a suite of web experiences for property websites.">
+    <link rel="icon" type="image/png" href="./assets/favicon.ico">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Compiled Tailwind CSS -->
+    <link rel="stylesheet" href="./dist/output.css">
+</head>
+
+<body class="bg-white text-gray-900 font-sora antialiased selection:bg-brand-yellow selection:text-brand-dark">
+
+    <!-- Navigation -->
+    <nav class="w-full bg-white/80 backdrop-blur-md border-b border-gray-100 sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+            <!-- Logo -->
+            <div class="flex items-center">
+                <a href="index.html"><img src="./assets/sightro-logo.png" alt="Sightro Logo" class="h-8 w-auto"></a>
+            </div>
+
+            <!-- Desktop Links -->
+            <div class="hidden md:flex items-center gap-8 text-sm font-medium text-gray-600">
+                <!-- Dropdown for Product -->
+                <div class="relative group">
+                    <button
+                        class="flex items-center gap-1 text-charcoal-500 hover:text-charcoal-800 transition-colors cursor-pointer outline-none font-medium">
+                        Product
+                        <svg class="w-4 h-4 text-gray-400 group-hover:text-brand-dark transition-transform group-hover:-rotate-180 duration-200"
+                            fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7">
+                            </path>
+                        </svg>
+                    </button>
+                    <!-- Dropdown Menu with hover bridge -->
+                    <div
+                        class="absolute left-0 top-full pt-5 w-56 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 transform translate-y-2 group-hover:translate-y-0 z-50">
+                        <div class="bg-white border border-gray-100 rounded-2xl shadow-xl overflow-hidden py-2">
+                            <a href="sightro-for-website.html"
+                                class="block px-5 py-3 text-sm text-charcoal-500 hover:text-charcoal-800 hover:bg-brand-cream  font-medium transition-colors">Sightro
+                                for Websites</a>
+                            <a href="public-experience-network.html"
+                                class="block px-5 py-3 text-sm text-charcoal-500 hover:text-charcoal-800 hover:bg-brand-cream  font-medium transition-colors">Public
+                                Experience Network</a>
+                        </div>
+                    </div>
+                </div>
+                <a href="how-it-works.html" class="text-charcoal-500 hover:text-charcoal-800 transition-colors">How it
+                    works</a>
+
+                <!-- Dropdown for Solutions -->
+                <div class="relative group">
+                    <button
+                        class="flex items-center gap-1 text-charcoal-500 hover:text-charcoal-800 transition-colors cursor-pointer outline-none font-medium">
+                        Solutions
+                        <svg class="w-4 h-4 text-gray-400 group-hover:text-brand-dark transition-transform group-hover:-rotate-180 duration-200"
+                            fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7">
+                            </path>
+                        </svg>
+                    </button>
+                    <!-- Dropdown Menu with hover bridge -->
+                    <div
+                        class="absolute left-0 top-full pt-5 w-56 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 transform translate-y-2 group-hover:translate-y-0 z-50">
+                        <div class="bg-white border border-gray-100 rounded-2xl shadow-xl overflow-hidden py-2">
+                            <a href="developers.html"
+                                class="block px-5 py-3 text-sm text-charcoal-500 hover:text-charcoal-800 hover:bg-brand-cream  font-medium transition-colors">Developers
+                            </a>
+                            <a href="brokers.html"
+                                class="block px-5 py-3 text-sm text-charcoal-500 hover:text-charcoal-800 hover:bg-brand-cream  font-medium transition-colors">Brokers
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <a href="results.html" class="text-charcoal-500 hover:text-charcoal-800 transition-colors">Results</a>
+                <a href="pricing.html" class="text-charcoal-500 hover:text-charcoal-800 transition-colors">Pricing</a>
+            </div>
+
+            <!-- CTA -->
+            <div class="hidden md:flex items-center gap-4">
+                <button
+                    class="px-5 py-2.5 rounded-full bg-brand-dark text-white text-sm font-semibold hover:bg-gray-800 hover:-translate-y-1 transition-all duration-300 cursor-pointer">
+                    Experience Sightro Live
+                </button>
+            </div>
+
+            <!-- Mobile Menu Button -->
+            <button id="mobile-menu-btn"
+                class="md:hidden flex items-center p-2 text-gray-600 hover:text-brand-dark focus:outline-none cursor-pointer"
+                aria-label="Toggle mobile menu">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7">
+                    </path>
+                </svg>
+            </button>
+        </div>
+
+        <!-- Mobile Menu Overlay -->
+        <div id="mobile-menu"
+            class="hidden md:hidden absolute top-20 left-0 w-full bg-white border-b border-gray-100 shadow-xl flex-col">
+            <div class="px-6 py-6 flex flex-col gap-5 text-base font-medium text-gray-600">
+                <div class="flex flex-col gap-3">
+                    <div class="text-gray-400 text-xs uppercase tracking-widest font-bold">Product</div>
+                    <a href="sightro-for-website.html"
+                        class="pl-4 text-charcoal-500 hover:text-charcoal-800 transition-colors">Web
+                        Experiences</a>
+                    <a href="public-experience-network.html"
+                        class="pl-4 text-charcoal-500 hover:text-charcoal-800 transition-colors">Hub for
+                        Sales</a>
+                </div>
+                <a href="how-it-works.html" class="text-charcoal-500 hover:text-charcoal-800 transition-colors">How it
+                    works</a>
+                <div class="flex flex-col gap-3">
+                    <div class="text-gray-400 text-xs uppercase tracking-widest font-bold">Solutions</div>
+                    <a href="developers.html"
+                        class="pl-4 text-charcoal-500 hover:text-charcoal-800 transition-colors">Developers
+                    </a>
+                    <a href="brokers.html"
+                        class="pl-4 text-charcoal-500 hover:text-charcoal-800 transition-colors">Brokers
+                    </a>
+                </div>
+                <a href="results.html" class="text-charcoal-500 hover:text-charcoal-800 transition-colors">Results</a>
+                <a href="pricing.html" class="text-charcoal-500 hover:text-charcoal-800 transition-colors">Pricing</a>
+                <div class="pt-5 mt-2 border-t border-gray-100">
+                    <button
+                        class="w-full px-5 py-3 rounded-full bg-ink-navy-900 text-white font-semibold hover:bg-ink-navy-800 hover:-translate-y-1 transition-all duration-300 cursor-pointer">
+                        Sign in to Sightro Hub
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="bg-ink-navy-900 text-white pt-24 pb-32 px-6">
+        <div class="max-w-7xl mx-auto grid lg:grid-cols-2 gap-12 items-center">
+            <div class="max-w-2xl">
+                <div
+                    class="inline-block px-3 py-1 mb-6 bg-brass-gold-500 text-white text-12 font-medium tracking-wider uppercase">
+                    SIGHTRO WEB EXPERIENCES
+                </div>
+                <h1 class="text-52 md:text-52 font-medium leading-tight mb-6">
+                    Make your property website part of your sales team.
+                </h1>
+                <p class="text-18 text-white mb-8 max-w-xl leading-relaxed font-normal">
+                    Sightro is a suite of web experiences for property websites. It converts the intent of website
+                    visitors into actionable data for your sales team to convert.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4">
+                    <button
+                        class="px-6 py-3.5 rounded-full bg-brass-gold-500 hover:bg-brass-gold-600 hover:-translate-y-1 text-ink-navy-900 font-bold transition-all duration-300 shadow-lg cursor-pointer text-18">
+                        Experience Sightro Hub
+                    </button>
+                    <button
+                        class="px-6 py-3.5 rounded-full bg-ink-navy-700 hover:bg-ink-navy-950 hover:-translate-y-1 text-white font-semibold transition-all duration-300 cursor-pointer text-18">
+                        Book a demo
+                    </button>
+                </div>
+                <p class="text-14 font-medium text-ink-navy-300 mt-4">No website rebuild required.</p>
+            </div>
+            <div class="hidden lg:block">
+                <!-- Placeholder for Hero Graphic if any -->
+            </div>
+        </div>
+    </header>
+
+    <!-- Stats Section -->
+    <section class="bg-white py-16 border-b border-gray-100">
+        <div
+            class="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-8 text-center divide-y md:divide-y-0 md:divide-x divide-gray-200">
+            <div class="py-4">
+                <div class="text-48 md:text-48 font-semibold text-ink-navy-900 mb-2">4X</div>
+                <div class="text-16 font-medium text-charcoal-500  tracking-wide">Lead conversion rate</div>
+            </div>
+            <div class="py-4">
+                <div class="text-48 md:text-48 font-semibold text-ink-navy-900 mb-2">45%</div>
+                <div class="text-16 font-medium text-charcoal-500  tracking-wide">More engagement time on site
+                </div>
+            </div>
+            <div class="py-4">
+                <div class="text-48 md:text-48 font-semibold text-ink-navy-900 mb-2">3X</div>
+                <div class="text-16 font-medium text-charcoal-500 tracking-wide">Higher listing views</div>
+            </div>
+        </div>
+        <div>
+            <p class="text-12 font-normal text-ink-navy-300 mt-8 text-center">Pilot results from Sightro developer
+                projects</p>
+        </div>
+    </section>
+
+    <!-- Features Section 1 (Split) -->
+    <section class="bg-warm-sand-200 py-24 px-6">
+        <div class="max-w-7xl mx-auto grid lg:grid-cols-2 gap-16 items-center">
+            <div>
+                <div class="text-brass-gold-500 text-12 font-bold uppercase tracking-wide mb-4">THE PROBLEM</div>
+                <h2 class="text-40 font-semibold  text-charcoal-800 mb-6 leading-tight">
+                    Your website shows the property.
+                    It does not tell you who is interested — or why.
+                </h2>
+                <p class="text-charcoal-500 text-18 font-normal mb-8 leading-relaxed">
+                    Waiting for a form fill means missing out on highly engaged prospects. See exactly who is looking,
+                    what they are looking at, and when to reach out to close the deal.
+                </p>
+            </div>
+            <!-- Mock UI Card -->
+            <div class="flex justify-center lg:justify-end px-4">
+                <img src="./assets/typical-journey.png" alt="The Typical Journey"
+                    class="w-4/5 max-w-sm lg:max-w-md h-auto object-contain">
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section 2 (Grid) -->
+    <section class="bg-warm-sand-100 py-24 px-6 border-t border-brand-cream-dark">
+        <div class="max-w-7xl mx-auto">
+            <div class="mb-16">
+                <div class="text-brass-gold-500 text-12 font-bold uppercase tracking-wide mb-4">THE SIGHTRO EXPERIENCE
+                </div>
+                <h2 class="text-40 font-semibold text-charcoal-800 mb-6 leading-tight">Give buyers more reasons to
+                    explore.
+                </h2>
+                <p class="text-charcoal-500 text-18 font-normal mb-8 leading-relaxed">Four interactive experiences turn
+                    a passive property website into an active discovery journey.</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-6">
+                <!-- Card 1 -->
+                <div class="bg-warm-sand-200 p-8 border-l-5 border-brass-gold-500 hover:shadow-lg transition-shadow">
+                    <img src="./assets/dream-room-icon.png" alt="DreamRoom Icon" class="w-12 h-12 object-contain mb-6">
+                    <h3 class="text-24 font-bold text-charcoal-800 mb-2">DreamRoom</h3>
+                    <p class="text-16 text-charcoal-800 font-medium mb-3">See the home differently.</p>
+                    <p class="text-charcoal-600 text-16 font-normal leading-relaxed">Let buyers reimagine rooms with AI
+                        and
+                        explore what
+                        the property could become.</p>
+                </div>
+                <!-- Card 2 -->
+                <div class="bg-warm-sand-200 p-8 border-l-5 border-brass-gold-500 hover:shadow-lg transition-shadow">
+                    <img src="./assets/life-echo-icon.png" alt="LifeEcho Icon" class="w-12 h-12 object-contain mb-6">
+                    <h3 class="text-24 font-bold text-charcoal-800 mb-2">LifeEcho</h3>
+                    <p class="text-16 text-charcoal-800 font-medium mb-3">See life here before moving in.</p>
+                    <p class="text-charcoal-600 text-16 font-normal leading-relaxed">Simulate everyday scenarios around
+                        the home,
+                        lifestyle and priorities that matter to the buyer.</p>
+                </div>
+                <!-- Card 3 -->
+                <div class="bg-warm-sand-200 p-8 border-l-5 border-brass-gold-500 hover:shadow-lg transition-shadow">
+                    <img src="./assets/neighbourhood-tour-icon.png" alt="NeighborhoodTour Icon" class="w-12 h-12 object-contain mb-6">
+                    <h3 class="text-24 font-bold text-charcoal-800 mb-2">NeighborhoodTour</h3>
+                    <p class="text-16 text-charcoal-800 font-medium mb-3">Explore beyond the front door.</p>
+                    <p class="text-charcoal-600 text-16 font-normal leading-relaxed">Understand the surrounding area
+                        through places,
+                        amenities and the everyday destinations buyers care about.</p>
+                </div>
+                <!-- Card 4 -->
+                <div class="bg-warm-sand-200 p-8 border-l-5 border-brass-gold-500 hover:shadow-lg transition-shadow">
+                    <img src="./assets/local-watch-icon.png" alt="LocalWatch Icon" class="w-12 h-12 object-contain mb-6">
+                    <h3 class="text-24 font-bold text-charcoal-800 mb-2">LocalWatch</h3>
+                    <p class="text-16 text-charcoal-800 font-medium mb-3">See what is coming next.</p>
+                    <p class="text-charcoal-600 text-16 font-normal leading-relaxed">AI surfaces meaningful local
+                        developments —
+                        infrastructure, new amenities and community investment — in concise, useful updates.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section 3 (Split dark) -->
+    <section class="bg-ink-navy-950 py-24 px-6 text-white">
+        <div class="max-w-7xl mx-auto grid lg:grid-cols-2 gap-16 items-center">
+            <div>
+                <div class="text-brass-gold-500 text-12 font-bold uppercase tracking-wide mb-4">THE INTELLIGENCE LAYER
+                </div>
+                <h2 class="text-40 font-semibold text-white mb-6 leading-tight">
+                    Every interaction creates a clearer picture of buyer intent.
+                </h2>
+                <p class="text-gray-400 text-lg leading-relaxed">
+                    Sightro tracks engagement time, features used, and properties viewed, automatically rating the lead
+                    for your sales team to act on immediately.
+                </p>
+            </div>
+            <!-- Mock UI Card -->
+            <div class="flex justify-center lg:justify-end px-4">
+                <img src="./assets/intent-profile.png" alt="Buyers intent profile"
+                    class="w-4/5 max-w-sm lg:max-w-md h-auto object-contain">
+            </div>
+        </div>
+    </section>
+
+    <!-- Steps Section -->
+    <section class="bg-warm-sand-200 py-24 px-6">
+        <div class="max-w-7xl mx-auto">
+            <div class="mb-16">
+                <div class="text-brass-gold-500 text-12 font-bold uppercase tracking-wide mb-4">HOW IT WORKS</div>
+                <h2 class="text-40 font-semibold text-charcoal-800 mb-6 leading-tight">Simple to deploy. Powerful to
+                    use.
+                </h2>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
+                <div class="bg-white p-6 rounded-2xl border border-gray-200">
+                    <div class="text-brass-gold-500 text-16 font-bold mb-2">01</div>
+                    <h3 class="text-24 font-bold text-charcoal-800 mb-2">Embed</h3>
+                    <p class="text-charcoal-600 text-16 font-normal leading-relaxed">Add Sightro's snippet to the
+                        property
+                        website.
+                    </p>
+                </div>
+                <div class="bg-white p-6 rounded-2xl border border-gray-200">
+                    <div class="text-brass-gold-500 text-16 font-bold mb-2">02</div>
+                    <h3 class="text-24 font-bold text-charcoal-800 mb-2">Engage</h3>
+                    <p class="text-charcoal-600 text-16 font-normal leading-relaxed">Buyers explore the experiences on
+                        the website directly.</p>
+                </div>
+                <div class="bg-white p-6 rounded-2xl border border-gray-200">
+                    <div class="text-brass-gold-500 text-16 font-bold mb-2">03</div>
+                    <h3 class="text-24 font-bold text-charcoal-800 mb-2">Understand</h3>
+                    <p class="text-charcoal-600 text-16 font-normal leading-relaxed">Sightro scores intent based on
+                        interactions and time spent.</p>
+                </div>
+                <div class="bg-white p-6 rounded-2xl border border-gray-200">
+                    <div class="text-brass-gold-500 text-16 font-bold mb-2">04</div>
+                    <h3 class="text-24 font-bold text-charcoal-800 mb-2">Convert</h3>
+                    <p class="text-charcoal-600 text-16">Your sales team gets notified when intent is very strong.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section 4 (Split dark) -->
+    <section class="bg-ink-navy-950 py-24 px-6 text-white border-t border-gray-800">
+        <div class="max-w-7xl mx-auto grid lg:grid-cols-2 gap-16 items-center">
+            <div>
+                <div class="text-brass-gold-500 text-12 font-bold uppercase tracking-wide mb-4">SIGHTRO PUBLIC
+                    EXPERIENCE NETWORK
+                </div>
+                <h2 class="text-40 text-white font-semibold mb-6 leading-tight">
+                    Bring property discovery beyond the website.
+                </h2>
+                <p class="text-gray-400 text-16 font-normal leading-relaxed mb-8">
+                    Interactive digital brochures, campaign-based outreach, and personalized buyer rooms make engaging
+                    very intuitive, and creates scale for the sales teams.
+                </p>
+                <div>
+                    <button
+                        class="px-6 py-3 text-16 rounded-full bg-brass-gold-500 hover:bg-brass-gold-500 hover:-translate-y-1 text-ink-navy-900 font-semibold transition-all duration-300 shadow-lg cursor-pointer">
+                        Explore Sightro Kiosk
+                    </button>
+                </div>
+            </div>
+            <!-- Mock UI Card -->
+            <div class="flex justify-center lg:justify-end px-4">
+                <img src="./assets/kiosk-mockup.png" alt="Sightro Kiosk"
+                    class="w-4/5 max-w-sm lg:max-w-md h-auto object-contain">
+            </div>
+        </div>
+    </section>
+
+    <!-- Outcome Stats -->
+    <section class="bg-warm-sand-100 py-24 px-6 border-b border-gray-200">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-brass-gold-500 text-12 font-bold uppercase tracking-wide mb-4">RESULTS</div>
+            <h2 class="text-40 text-charcoal-800 font-semibold mb-4">Engagement is the beginning. Intent is the outcome.
+            </h2>
+            <p class="text-charcoal-600 text-16 font-normal leading-relaxed mb-12">Sightro is designed to make property
+                discovery more useful for both sides of the conversation.</p>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div class="bg-warm-sand-200 p-8 ">
+                    <div class="text-24 font-semibold text-brand-dark mb-2">4X</div>
+                    <div class="text-16 font-medium text-charcoal-600 uppercase">Increase in lead flow</div>
+                </div>
+                <div class="bg-warm-sand-200 p-8 ">
+                    <div class="text-24 font-semibold text-brand-dark mb-2">65%</div>
+                    <div class="text-16 font-medium text-charcoal-600 uppercase">Increase in time on site</div>
+                </div>
+                <div class="bg-warm-sand-200 p-8 ">
+                    <div class="text-24 font-semibold text-brand-dark mb-2">3X</div>
+                    <div class="text-16 font-medium text-charcoal-600 uppercase">Increase in agent contact</div>
+                </div>
+            </div>
+            <p class="text-12 text-charcoal-400 mt-6">Pilot results from Sightro developer projects</p>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section class="bg-warm-sand-200 py-24 px-6">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-brass-gold-500 text-12 font-bold uppercase tracking-wide mb-4">PRICING</div>
+            <h2 class="text-40 md:text-4xl font-semibold text-charcoal-800  mb-4">Start with the experience. Scale with
+                your portfolio.</h2>
+            <p class="text-charcoal-600 text-16 font-normal leading-relaxed mb-12">Flexible plans for developers and
+                brokers. Enterprise deployments available.</p>
+
+            <div class="grid md:grid-cols-3 gap-6 items-center">
+                <!-- Plan 1 -->
+                <div class="bg-warm-sand-100 p-8 rounded-3xl border border-warm-sand-500 h-full">
+                    <div class="text-brass-gold-500 text-16 font-bold uppercase tracking-widest mb-4">STARTER</div>
+                    <h3 class="text-16 font-semibold text-charcoal-800 mb-2">For a property or small portfolio</h3>
+                    <div class="text-24 font-semibold text-charcoal-800 mb-6">From $499 / month</div>
+                    <ul class="space-y-1 text-16 text-charcoal-600">
+                        <li>Core experiences</li>
+                        <li>Lead capture</li>
+                        <li>Basic analytics</li>
+                    </ul>
+                </div>
+                <!-- Plan 2 (Highlighted) -->
+                <div class="bg-ink-navy-900 text-white p-10 rounded-3xl shadow-xl  h-full border border-gray-700">
+                    <div class="text-brass-gold-500 text-16 font-bold uppercase tracking-widest mb-4">GROWTH</div>
+                    <h3 class="text-16 font-semibold text-white mb-2">For growing development teams</h3>
+                    <div class="text-24 font-semibold text-white mb-6">From $999 / month</div>
+                    <ul class="space-y-1 text-16 text-white">
+                        <li>All experiences</li>
+                        <li>Buyer intelligence</li>
+                        <li>Advanced analytics</li>
+                    </ul>
+                </div>
+                <!-- Plan 3 -->
+                <div class="bg-warm-sand-100 p-8 rounded-3xl border border-warm-sand-500 h-full">
+                    <div class="text-brass-gold-500 text-16 font-bold uppercase tracking-widest mb-4">ENTERPRISE</div>
+                    <h3 class="text-16 font-semibold text-charcoal-800 mb-2">For portfolios and custom deployments</h3>
+                    <div class="text-24 font-semibold text-charcoal-800 mb-6">Talk to us</div>
+                    <ul class="space-y-1 text-16 text-charcoal-600">
+                        <li>Custom integrations</li>
+                        <li>Enterprise reporting</li>
+                        <li>Kiosk + public network</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Bottom CTA -->
+    <section class="bg-ink-navy-900 py-24 px-6  text-white">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-brass-gold-500 text-12 font-bold uppercase tracking-wide mb-4">SEE SIGHTRO IN ACTION
+            </div>
+            <h2 class="text-40 md:text-5xl font-semibold leading-tight mb-6">
+                Give buyers more to explore.<br>
+                Give your sales team more to work with.
+            </h2>
+            <p class="text-18 font-normal text-white mb-10">Start building the future of property websites today.</p>
+            <div>
+                <button
+                    class="px-6 py-3 text-16 rounded-full bg-brass-gold-500 hover:bg-brass-gold-500 hover:-translate-y-1 text-ink-navy-900 font-semibold transition-all duration-300 shadow-lg cursor-pointer">
+                    Book a Demo
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-brand-darker py-16 px-6 border-t border-gray-800">
+        <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-12 text-sm">
+            <div class="col-span-1 md:col-span-1">
+                <div class="flex items-center mb-4">
+                    <a href="index.html"><img src="./assets/logo.png" alt="Sightro Logo" class="h-10 w-auto"></a>
+                </div>
+                <p class="text-gray-500">See how Sightro can transform your property experience.</p>
+            </div>
+
+            <div>
+                <h4 class="font-bold text-brass-gold-500 mb-4 uppercase tracking-wider text-xs">Product</h4>
+                <ul class="space-y-3 text-ink-navy-500">
+                    <li><a href="sightro-for-website.html" class="hover:text-brass-gold-400 transition-colors">Website
+                            Experiences</a></li>
+                    <li><a href="#" class="hover:text-brass-gold-400 transition-colors">DreamRoom</a></li>
+                    <li><a href="#" class="hover:text-brass-gold-400 transition-colors">LifeEcho</a></li>
+                    <li><a href="#" class="hover:text-brass-gold-400 transition-colors">NeighborhoodTour</a></li>
+                    <li><a href="#" class="hover:text-brass-gold-400 transition-colors">LocalWatch</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <h4 class="font-bold text-brass-gold-500 mb-4 uppercase tracking-wider text-xs">NETWORK</h4>
+                <ul class="space-y-3 text-ink-navy-500">
+                    <li><a href="#" class="hover:text-brass-gold-400 transition-colors">Sightro Kiosk</a></li>
+                    <li><a href="public-experience-network.html"
+                            class="hover:text-brass-gold-400 transition-colors">Public Experience Network</a>
+                    </li>
+
+                </ul>
+            </div>
+
+            <div>
+                <h4 class="font-bold text-brass-gold-500 mb-4 uppercase tracking-wider text-xs">COMPANY</h4>
+                <ul class="space-y-3 text-ink-navy-500">
+                    <li><a href="about.html" class="hover:text-brass-gold-400 transition-colors">About</a></li>
+                    <li><a href="results.html" class="hover:text-brass-gold-400 transition-colors">Results</a></li>
+                    <li><a href="pricing.html" class="hover:text-brass-gold-400 transition-colors">Pricing</a></li>
+                    <li><a href="#" class="hover:text-brass-gold-400 transition-colors">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+        <div
+            class="max-w-7xl mx-auto mt-16 pt-8 border-t border-gray-800 text-gray-600 text-xs flex flex-col md:flex-row justify-between items-center">
+            <p>&copy; © 2026 Sightro. All rights reserved.</p>
+            <div class="flex gap-4 mt-4 md:mt-0">
+                <a href="#" class="hover:text-white transition-colors">Privacy</a>
+                <a href="#" class="hover:text-white transition-colors">Terms</a>
+                <a href="#" class="hover:text-white transition-colors">Security</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- GSAP & ScrollTrigger -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <!-- Lenis for smooth scrolling -->
+    <script src="https://unpkg.com/@studio-freight/lenis@1.0.34/dist/lenis.min.js"></script>
+
+    <script>
+        // Initialize Lenis Smooth Scrolling
+        const lenis = new Lenis({
+            duration: 1.2,
+            easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+            direction: 'vertical',
+            gestureDirection: 'vertical',
+            smooth: true,
+            mouseMultiplier: 1,
+            smoothTouch: false,
+            touchMultiplier: 2,
+            infinite: false,
+        });
+
+        // Integrate Lenis with GSAP ScrollTrigger
+        lenis.on('scroll', ScrollTrigger.update);
+
+        gsap.ticker.add((time) => {
+            lenis.raf(time * 1000);
+        });
+        gsap.ticker.lagSmoothing(0);
+
+        // Mobile Menu Toggle
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+            mobileMenu.classList.toggle('flex');
+        });
+
+        // GSAP Scroll Animations
+        gsap.registerPlugin(ScrollTrigger);
+
+        // Select elements to animate
+        const animatedSections = document.querySelectorAll('header, section, footer');
+
+        // Auto-tag elements for stagger reveal based on layout
+        animatedSections.forEach(section => {
+            // Hero section
+            section.querySelectorAll('.max-w-2xl > *').forEach(el => el.classList.add('gsap-reveal'));
+            // Grid items (cards, columns)
+            section.querySelectorAll('.grid > div').forEach(el => el.classList.add('gsap-reveal'));
+            // Headers
+            section.querySelectorAll('.mb-16 > *').forEach(el => el.classList.add('gsap-reveal'));
+            // Bottom CTA
+            section.querySelectorAll('.max-w-3xl > *').forEach(el => el.classList.add('gsap-reveal'));
+
+            // For split sections where the left text is in a plain wrapper inside a grid
+            const grid = section.querySelector('.grid');
+            if (grid) {
+                const firstChild = grid.firstElementChild;
+                if (firstChild && !firstChild.className.includes('bg-')) {
+                    firstChild.classList.remove('gsap-reveal');
+                    Array.from(firstChild.children).forEach(el => el.classList.add('gsap-reveal'));
+                }
+            }
+
+            // Footer text items
+            if (section.tagName.toLowerCase() === 'footer') {
+                section.querySelectorAll('h4, ul > li, p, .flex.items-center').forEach(el => el.classList.add('gsap-reveal'));
+            }
+        });
+
+        animatedSections.forEach((section) => {
+            const targets = section.querySelectorAll('.gsap-reveal');
+            if (targets.length > 0) {
+                // Staggered animation for children
+                gsap.from(targets, {
+                    scrollTrigger: {
+                        trigger: section,
+                        start: "top 85%", // Trigger when the top of the section hits 85% of the viewport height
+                        toggleActions: "play none none reverse"
+                    },
+                    y: 40,
+                    opacity: 0,
+                    duration: 0.8,
+                    stagger: 0.15,
+                    ease: "power3.out"
+                });
+            } else {
+                // Fallback to animating the entire section if no children tagged
+                gsap.from(section, {
+                    scrollTrigger: {
+                        trigger: section,
+                        start: "top 85%",
+                        toggleActions: "play none none reverse"
+                    },
+                    y: 40,
+                    opacity: 0,
+                    duration: 0.8,
+                    ease: "power3.out"
+                });
+            }
+        });
+    </script>
+</body>
+
+</html>

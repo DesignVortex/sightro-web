@@ -1,0 +1,100 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sora: "Sora", sans-serif;
+  
+  /* Font Sizes (10px to 72px) */
+  --text-10: 10px;
+  --text-12: 12px;
+  --text-14: 14px;
+  --text-16: 16px;
+  --text-18: 18px;
+  --text-20: 20px;
+  --text-22: 22px;
+  --text-24: 24px;
+  --text-26: 26px;
+  --text-28: 28px;
+  --text-30: 30px;
+  --text-32: 32px;
+  --text-34: 34px;
+  --text-36: 36px;
+  --text-38: 38px;
+  --text-40: 40px;
+  --text-42: 42px;
+  --text-44: 44px;
+  --text-46: 46px;
+  --text-48: 48px;
+  --text-50: 50px;
+  --text-52: 52px;
+  --text-54: 54px;
+  --text-56: 56px;
+  --text-58: 58px;
+  --text-60: 60px;
+  --text-62: 62px;
+  --text-64: 64px;
+  --text-66: 66px;
+  --text-68: 68px;
+  --text-70: 70px;
+  --text-72: 72px;
+
+  /* Custom brand colors based on the design */
+  --color-brand-dark: #111827;
+  --color-brand-darker: #0b111e;
+  --color-brand-cream: #fdfbf7;
+  --color-brand-cream-dark: #f5f0e6;
+  --color-brand-yellow: #dfb254;
+  --color-brand-yellow-hover: #c99e41;
+  --color-brand-gray: #6b7280;
+
+  /* Ink-navy */
+  --color-ink-navy-50: #F4F6F9;
+  --color-ink-navy-100: #E7EAF0;
+  --color-ink-navy-200: #CDD2DC;
+  --color-ink-navy-300: #A8AFBE;
+  --color-ink-navy-400: #737D91;
+  --color-ink-navy-500: #4A566D;
+  --color-ink-navy-600: #303D56;
+  --color-ink-navy-700: #202D46;
+  --color-ink-navy-800: #16223B;
+  --color-ink-navy-900: #101C34;
+  --color-ink-navy-950: #0A1224;
+
+  /* Warm-sand */
+  --color-warm-sand-50: #FCFBF8;
+  --color-warm-sand-100: #F8F5EF;
+  --color-warm-sand-200: #F3EEE5;
+  --color-warm-sand-300: #EFE7D8;
+  --color-warm-sand-400: #E5DCCB;
+  --color-warm-sand-500: #D8CDB9;
+  --color-warm-sand-600: #C6B9A2;
+  --color-warm-sand-700: #A89A82;
+  --color-warm-sand-800: #897B64;
+  --color-warm-sand-900: #685B47;
+  --color-warm-sand-950: #42392B;
+
+  /* Charcoal */
+  --color-charcoal-50: #F8F7F5;
+  --color-charcoal-100: #EEEDE9;
+  --color-charcoal-200: #D9D7D1;
+  --color-charcoal-300: #B8B5AC;
+  --color-charcoal-400: #8F8B80;
+  --color-charcoal-500: #68645A;
+  --color-charcoal-600: #4D4A42;
+  --color-charcoal-700: #39362F;
+  --color-charcoal-800: #2A2822;
+  --color-charcoal-900: #1E1C18;
+  --color-charcoal-950: #12110E;
+
+  /* Brass-gold */
+  --color-brass-gold-50: #FBF8F0;
+  --color-brass-gold-100: #F5EEDC;
+  --color-brass-gold-200: #E9D9B3;
+  --color-brass-gold-300: #DEC58A;
+  --color-brass-gold-400: #D3AE68;
+  --color-brass-gold-500: #C9A253;
+  --color-brass-gold-600: #B18A3D;
+  --color-brass-gold-700: #8D6B2E;
+  --color-brass-gold-800: #6C501F;
+  --color-brass-gold-900: #4B3715;
+  --color-brass-gold-950: #2C200B;
+}
