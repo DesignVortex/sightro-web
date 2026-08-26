@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 
 <head>
     <meta charset="UTF-8">
@@ -10,6 +10,9 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./dist/output.css">
+    <!-- GSAP Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
 </head>
 
 <body class="bg-white text-gray-900 font-sora antialiased selection:bg-brand-yellow selection:text-brand-dark">
@@ -133,11 +136,117 @@
         </div>
     </nav>
 
-    <!-- Main Content -->
-    <main class="py-32 px-6 min-h-[60vh] flex flex-col items-center justify-center bg-warm-sand-100">
-        <h1 class="text-40 font-semibold text-charcoal-800 text-center mb-6">Developers</h1>
-        <p class="text-18 text-charcoal-500 text-center max-w-2xl">This page is currently under construction. Stay tuned
-            for more updates on Developers.</p>
+    <main>
+        <!-- 1. Hero Section -->
+        <section class="bg-ink-navy-900 pt-24 pb-32 px-6">
+            <div class="max-w-7xl mx-auto relative z-10 grid md:grid-cols-2 gap-12 items-center">
+                <!-- Left Content -->
+                <div class="text-white max-w-3xl">
+                    <div
+                        class="inline-block px-3 py-1 mb-6 bg-brass-gold-500 text-white text-12 font-medium tracking-wider uppercase">
+                        FOR DEVELOPERS
+                    </div>
+                    <h1 class="text-52 md:text-56 font-semibold mb-6 leading-tight">
+                        Turn digital property marketing into a better sales experience.
+                    </h1>
+                    <p class="text-18 text-gray-300 leading-relaxed font-normal">
+                        You already invest in photography, video, websites, paid media and sales galleries. Sightro
+                        makes the digital property experience work harder.
+                    </p>
+                </div>
+                <!-- Right Content -->
+                <div class="bg-warm-sand-100 rounded-3xl p-10 shadow-xl  ml-auto w-full">
+                    <h2 class="text-12 font-bold text-brass-gold-500 mb-4 tracking-wider uppercase">
+                        SIGHTRO
+                    </h2>
+                    <h3 class="text-32 md:text-40 font-bold text-charcoal-900 mb-4 leading-tight">
+                        PROPERTY EXPERIENCE
+                    </h3>
+                    <p class="text-18 text-charcoal-600 font-normal">
+                        Interactive layer on your existing site.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 2. Benefits Row -->
+        <section class="bg-white py-24 px-6 border-b border-warm-sand-200">
+            <div class="max-w-7xl mx-auto">
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <!-- Card 1 -->
+                    <div class="bg-warm-sand-200 border border-warm-sand-500 rounded-xl p-8">
+                        <h4 class="text-18 font-bold text-charcoal-900 mb-4">Increase engagement</h4>
+                        <p class="text-16 text-charcoal-600 leading-relaxed">
+                            Give buyers reasons to stay, explore and imagine.
+                        </p>
+                    </div>
+                    <!-- Card 2 -->
+                    <div class="bg-warm-sand-200 border border-warm-sand-500 rounded-xl p-8">
+                        <h4 class="text-18 font-bold text-charcoal-900 mb-4">Improve lead quality</h4>
+                        <p class="text-16 text-charcoal-600 leading-relaxed">
+                            Understand what the buyer actually cares about.
+                        </p>
+                    </div>
+                    <!-- Card 3 -->
+                    <div class="bg-warm-sand-200 border border-warm-sand-500 rounded-xl p-8">
+                        <h4 class="text-18 font-bold text-charcoal-900 mb-4">Give sales more context</h4>
+                        <p class="text-16 text-charcoal-600 leading-relaxed">
+                            Turn behavior into a better reason to follow up.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 3. Designed for the realities of development marketing. -->
+        <section class="bg-warm-sand-100 py-32 px-6">
+            <div class="max-w-7xl mx-auto">
+                <h2 class="text-40 md:text-48 font-semibold text-charcoal-900 mb-10 leading-tight max-w-7xl">
+                    Designed for the realities of development marketing.
+                </h2>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+                    <div class="bg-white border border-warm-sand-500 rounded-xl px-6 py-5">
+                        <span class="text-charcoal-800 text-16 font-medium">New development launch</span>
+                    </div>
+                    <div class="bg-white border border-warm-sand-500 rounded-xl px-6 py-5">
+                        <span class="text-charcoal-800 text-16 font-medium">Project website conversion</span>
+                    </div>
+                    <div class="bg-white border border-warm-sand-500 rounded-xl px-6 py-5">
+                        <span class="text-charcoal-800 text-16 font-medium">Sales gallery extension</span>
+                    </div>
+                    <div class="bg-white border border-warm-sand-500 rounded-xl px-6 py-5">
+                        <span class="text-charcoal-800 text-16 font-medium">International buyer discovery</span>
+                    </div>
+                    <div class="bg-white border border-warm-sand-500 rounded-xl px-6 py-5">
+                        <span class="text-charcoal-800 text-16 font-medium">Trade-show / event activation</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 4. Bottom CTA Section -->
+        <section class="bg-white py-32 px-6">
+            <div class="max-w-7xl mx-auto flex flex-col lg:flex-row items-center justify-between gap-12">
+                <div class="max-w-3xl">
+                    <h3 class="text-24 md:text-24 font-semibold text-charcoal-900 mb-4 leading-tight">
+                        Scale the same experience across properties, communities and campaigns.
+                    </h3>
+                    <p class="text-18 text-charcoal-600 text-18 font-normal leading-relaxed">
+                        Instead of a lead that says "someone visited," sales can see what the buyer explored and what
+                        seems to matter.
+                    </p>
+                </div>
+                <div class="flex-shrink-0 max-w-3xl">
+                    <div>
+                        <a href="#"
+                            class="inline-block px-8 py-4 rounded-full bg-brass-gold-500 hover:bg-brass-gold-600 text-ink-navy-900 font-semibold transition-all duration-300 hover:-translate-y-1 shadow-lg text-18 text-center cursor-pointer">
+                            Experience Sightro Live
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
     </main>
 
     <footer class="bg-brand-darker py-16 px-6 border-t border-gray-800">
@@ -184,7 +293,7 @@
         </div>
         <div
             class="max-w-7xl mx-auto mt-16 pt-8 border-t border-gray-800 text-gray-600 text-xs flex flex-col md:flex-row justify-between items-center">
-            <p>&copy; © 2026 Sightro. All rights reserved.</p>
+            <p>&copy;2026 Sightro. All rights reserved.</p>
             <div class="flex gap-4 mt-4 md:mt-0">
                 <a href="#" class="hover:text-white transition-colors">Privacy</a>
                 <a href="#" class="hover:text-white transition-colors">Terms</a>
@@ -203,6 +312,71 @@
                 mobileMenu.classList.toggle('flex');
             });
         }
+
+        // GSAP Scroll Animations
+        gsap.registerPlugin(ScrollTrigger);
+
+        // Select elements to animate
+        const animatedSections = document.querySelectorAll('header, section, footer');
+
+        // Auto-tag elements for stagger reveal based on layout
+        animatedSections.forEach(section => {
+            // Hero section
+            section.querySelectorAll('.max-w-2xl > *, .max-w-xl > *').forEach(el => el.classList.add('gsap-reveal'));
+            // Grid items (cards, columns)
+            section.querySelectorAll('.grid > div').forEach(el => el.classList.add('gsap-reveal'));
+            // Headers
+            section.querySelectorAll('.mb-16 > *, .mb-10 > *').forEach(el => el.classList.add('gsap-reveal'));
+            // Bottom CTA
+            section.querySelectorAll('.max-w-3xl > *').forEach(el => el.classList.add('gsap-reveal'));
+
+            // For split sections where the left text is in a plain wrapper inside a grid
+            const grid = section.querySelector('.grid');
+            if (grid) {
+                const firstChild = grid.firstElementChild;
+                if (firstChild && !firstChild.className.includes('bg-')) {
+                    firstChild.classList.remove('gsap-reveal');
+                    Array.from(firstChild.children).forEach(el => el.classList.add('gsap-reveal'));
+                }
+            }
+
+            // Footer text items
+            if (section.tagName.toLowerCase() === 'footer') {
+                section.querySelectorAll('h4, ul > li, p, .flex.items-center').forEach(el => el.classList.add('gsap-reveal'));
+            }
+        });
+
+        animatedSections.forEach((section) => {
+            const targets = section.querySelectorAll('.gsap-reveal');
+            if (targets.length > 0) {
+                // Staggered animation for children
+                gsap.from(targets, {
+                    scrollTrigger: {
+                        trigger: section,
+                        start: "top 85%", // Trigger when the top of the section hits 85% of the viewport height
+                        toggleActions: "play none none reverse"
+                    },
+                    y: 40,
+                    opacity: 0,
+                    duration: 0.8,
+                    stagger: 0.15,
+                    ease: "power3.out"
+                });
+            } else {
+                // Fallback to animating the entire section if no children tagged
+                gsap.from(section, {
+                    scrollTrigger: {
+                        trigger: section,
+                        start: "top 85%",
+                        toggleActions: "play none none reverse"
+                    },
+                    y: 40,
+                    opacity: 0,
+                    duration: 0.8,
+                    ease: "power3.out"
+                });
+            }
+        });
     </script>
 </body>
 
