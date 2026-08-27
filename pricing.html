@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 
 <head>
     <meta charset="UTF-8">
@@ -10,6 +10,9 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./dist/output.css">
+    <!-- GSAP Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
 </head>
 
 <body class="bg-white text-gray-900 font-sora antialiased selection:bg-brand-yellow selection:text-brand-dark">
@@ -80,10 +83,10 @@
 
             <!-- CTA -->
             <div class="hidden md:flex items-center gap-4">
-                <button
-                    class="px-5 py-2.5 rounded-full bg-brand-dark text-white text-sm font-semibold hover:bg-gray-800 hover:-translate-y-1 transition-all duration-300 cursor-pointer">
+                <a href="sightro-in-action.html"
+                    class="px-5 py-2.5 rounded-full bg-ink-navy-900 text-white text-sm font-medium hover:bg-brass-gold-500 hover:-translate-y-1 transition-all duration-300 cursor-pointer">
                     Experience Sightro Live
-                </button>
+                </a>
             </div>
 
             <!-- Mobile Menu Button -->
@@ -125,7 +128,7 @@
                 <a href="pricing.html" class="text-charcoal-500 hover:text-charcoal-800 transition-colors">Pricing</a>
                 <div class="pt-5 mt-2 border-t border-gray-100">
                     <button
-                        class="w-full px-5 py-3 rounded-full bg-ink-navy-900 text-white font-semibold hover:bg-ink-navy-800 hover:-translate-y-1 transition-all duration-300 cursor-pointer">
+                        class="w-full px-5 py-3 rounded-full bg-ink-navy-900 text-white font-medium hover:bg-brass-gold-500 hover:-translate-y-1 transition-all duration-300 cursor-pointer">
                         Sign in to Sightro Hub
                     </button>
                 </div>
@@ -133,11 +136,178 @@
         </div>
     </nav>
 
-    <!-- Main Content -->
-    <main class="py-32 px-6 min-h-[60vh] flex flex-col items-center justify-center bg-warm-sand-100">
-        <h1 class="text-40 font-semibold text-charcoal-800 text-center mb-6">Pricing</h1>
-        <p class="text-18 text-charcoal-500 text-center max-w-2xl">This page is currently under construction. Stay tuned
-            for more updates on Pricing.</p>
+    <main>
+        <!-- 1. Hero Section -->
+        <section class="bg-ink-navy-900 pt-32 pb-40 px-6">
+            <div class="max-w-7xl mx-auto relative z-10">
+                <div class="max-w-7xl">
+                    <div
+                        class="inline-block px-3 py-1 mb-6 bg-brass-gold-500 text-white text-12 font-medium tracking-wider uppercase">
+                        PRICING
+                    </div>
+                    <h1 class="text-52 md:text-56 font-medium mb-6 leading-tight text-white">
+                        Start turning engagement into intent.
+                    </h1>
+                    <p class="text-18 text-white leading-relaxed font-normal max-w-4xl">
+                        Plans scale with the number of leads and level of deployment.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 2. Pricing Cards Row -->
+        <section class="bg-white py-24 px-6 border-b border-warm-sand-200">
+            <div class="max-w-7xl mx-auto">
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <!-- Basic Card -->
+                    <div class="bg-warm-sand-100 border border-warm-sand-500 rounded-3xl p-10 flex flex-col h-full">
+                        <div class="text-12 font-bold text-brass-gold-500 tracking-wider uppercase mb-4">BASIC</div>
+                        <div class="text-32 font-bold text-charcoal-900 mb-1">$199 <span
+                                class="text-16 font-normal text-charcoal-500">/ month</span></div>
+                        <p class="text-16 font-bold text-charcoal-900 mb-6">Up to 150 leads</p>
+                        <p class="text-16 text-charcoal-600 mb-8">For teams getting started with interactive property
+                            experiences.</p>
+                        <ul class="text-16 text-charcoal-600 space-y-3 mb-10 flex-grow">
+                            <li class="flex items-start">
+                                <span class="mr-2 mt-1 block w-1.5 h-1.5 rounded-full bg-charcoal-400"></span>
+                                <span class="ml-2">Interactive property experiences</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="mr-2 mt-1 block w-1.5 h-1.5 rounded-full bg-charcoal-400"></span>
+                                <span class="ml-2">Lead capture</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="mr-2 mt-1 block w-1.5 h-1.5 rounded-full bg-charcoal-400"></span>
+                                <span class="ml-2">Core analytics</span>
+                            </li>
+                        </ul>
+                        <div>
+                            <button
+                                class="w-auto px-8 py-3 rounded-full bg-ink-navy-900 text-white font-normal hover:bg-ink-navy-800 transition-all duration-300 hover:-translate-y-1">
+                                Choose Basic
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Pro Card (Highlighted) -->
+                    <div class="bg-ink-navy-900 rounded-3xl p-10 flex flex-col h-full shadow-2xl relative">
+                        <div class="text-12 font-bold text-brass-gold-500 tracking-wider uppercase mb-4">PRO</div>
+                        <div class="text-32 font-bold text-white mb-1">$599 <span
+                                class="text-16 font-normal text-gray-400">/ month</span></div>
+                        <p class="text-16 font-bold text-white mb-6">Up to 700 leads</p>
+                        <p class="text-16 text-gray-300 mb-8">For developers and brokers scaling interactive experiences
+                            across properties.</p>
+                        <ul class="text-16 text-white space-y-3 mb-10 flex-grow">
+                            <li class="flex items-start">
+                                <span class="mr-2 mt-1 block w-1.5 h-1.5 rounded-full bg-brass-gold-500"></span>
+                                <span class="ml-2">All core experiences</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="mr-2 mt-1 block w-1.5 h-1.5 rounded-full bg-brass-gold-500"></span>
+                                <span class="ml-2">Buyer-intent context</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="mr-2 mt-1 block w-1.5 h-1.5 rounded-full bg-brass-gold-500"></span>
+                                <span class="ml-2">Advanced deployment</span>
+                            </li>
+                        </ul>
+                        <div>
+                            <button
+                                class="w-auto px-8 py-3 rounded-full bg-brass-gold-500 text-ink-navy-900 font-medium hover:bg-brass-gold-600 transition-all duration-300 hover:-translate-y-1">
+                                Choose Pro
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Enterprise Card -->
+                    <div class="bg-warm-sand-100 border border-warm-sand-500 rounded-3xl p-10 flex flex-col h-full">
+                        <div class="text-12 font-bold text-brass-gold-500 tracking-wider uppercase mb-4">ENTERPRISE
+                        </div>
+                        <div class="text-32 font-bold text-charcoal-900 mb-1">$2,000 <span
+                                class="text-16 font-normal text-charcoal-500">/ month</span></div>
+                        <p class="text-16 font-bold text-charcoal-900 mb-6">Unlimited leads</p>
+                        <p class="text-16 text-charcoal-600 mb-8">For larger portfolios and enterprise deployments.</p>
+                        <ul class="text-16 text-charcoal-600 space-y-3 mb-10 flex-grow">
+                            <li class="flex items-start">
+                                <span class="mr-2 mt-1 block w-1.5 h-1.5 rounded-full bg-charcoal-400"></span>
+                                <span class="ml-2">Enterprise deployment</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="mr-2 mt-1 block w-1.5 h-1.5 rounded-full bg-charcoal-400"></span>
+                                <span class="ml-2">Portfolio scale</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="mr-2 mt-1 block w-1.5 h-1.5 rounded-full bg-charcoal-400"></span>
+                                <span class="ml-2">Custom reporting</span>
+                            </li>
+                        </ul>
+                        <div>
+                            <a href="#"
+                                class="inline-flex items-center text-brass-gold-500 font-semibold text-16 hover:text-brass-gold-400 transition-all duration-300 hover:-translate-y-1">
+                                Talk to Sales
+                                <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M9 5l7 7-7 7" />
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 3. Kiosk + Events Section -->
+        <section class="bg-white py-16 px-6">
+            <div class="max-w-7xl mx-auto border border-warm-sand-500 bg-warm-sand-100 rounded-3xl p-8 md:p-12">
+                <div class="text-12 font-bold text-brass-gold-500 tracking-wider uppercase mb-4">KIOSK + EVENTS</div>
+                <h3 class="text-32 md:text-40 font-semibold text-charcoal-900 mb-8 leading-tight">
+                    Extend Sightro into the physical world.
+                </h3>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-8">
+                    <!-- Pill 1 -->
+                    <div class="bg-white border border-warm-sand-500 rounded-2xl p-6 flex justify-between items-center">
+                        <span class="text-charcoal-800 text-16 font-medium">Event licenses</span>
+                        <span class="text-charcoal-500 text-14">from $2,000+ / event</span>
+                    </div>
+                    <!-- Pill 2 -->
+                    <div class="bg-white border border-warm-sand-500 rounded-2xl p-6 flex justify-between items-center">
+                        <span class="text-charcoal-800 text-16 font-medium">Monthly kiosk rental</span>
+                        <span class="text-charcoal-500 text-14">$300-$500 / month</span>
+                    </div>
+                </div>
+
+                <p class="text-14 text-charcoal-500">
+                    For public destinations, sales galleries and event activations.
+                </p>
+            </div>
+        </section>
+
+        <!-- 4. Bottom CTA Section -->
+        <section class="bg-white pb-32 pt-8 px-6">
+            <div class="max-w-7xl mx-auto">
+                <div class="flex flex-col md:flex-row items-baseline justify-between gap-8">
+                    <div>
+                        <h2 class="text-32 md:text-40 font-semibold text-charcoal-900 mb-4 leading-tight">
+                            Need a custom deployment?
+                        </h2>
+                        <div>
+                            <a href="#"
+                                class="inline-flex items-center text-brass-gold-500 font-semibold text-18 hover:text-brass-gold-400 transition-all duration-300 hover:-translate-y-1">
+                                See Sightro in Action
+                                <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M9 5l7 7-7 7" />
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                    <p class="text-14 text-charcoal-500">
+                        Public pricing shown here reflects the current Website Brief.
+                    </p>
+                </div>
+            </div>
+        </section>
     </main>
 
     <footer class="bg-brand-darker py-16 px-6 border-t border-gray-800">
@@ -186,9 +356,8 @@
             class="max-w-7xl mx-auto mt-16 pt-8 border-t border-gray-800 text-gray-600 text-xs flex flex-col md:flex-row justify-between items-center">
             <p>&copy;2026 Sightro. All rights reserved.</p>
             <div class="flex gap-4 mt-4 md:mt-0">
-                <a href="#" class="hover:text-white transition-colors">Privacy</a>
-                <a href="#" class="hover:text-white transition-colors">Terms</a>
-                <a href="#" class="hover:text-white transition-colors">Security</a>
+                <a href="privacy.html" class="hover:text-white transition-colors">Privacy</a>
+                <a href="terms.html" class="hover:text-white transition-colors">Terms</a>
             </div>
         </div>
     </footer>
@@ -203,6 +372,74 @@
                 mobileMenu.classList.toggle('flex');
             });
         }
+
+        // GSAP Scroll Animations
+        gsap.registerPlugin(ScrollTrigger);
+
+        // Select elements to animate
+        const animatedSections = document.querySelectorAll('header, section, footer');
+
+        // Auto-tag elements for stagger reveal based on layout
+        animatedSections.forEach(section => {
+            // Hero section
+            section.querySelectorAll('.max-w-2xl > *, .max-w-xl > *, .max-w-4xl > *, .max-w-7xl > h2, .max-w-7xl > p').forEach(el => el.classList.add('gsap-reveal'));
+            // Grid items (cards, columns)
+            section.querySelectorAll('.grid > div').forEach(el => el.classList.add('gsap-reveal'));
+            // Headers
+            section.querySelectorAll('.mb-16 > *, .mb-10 > *, .mb-8 > *').forEach(el => el.classList.add('gsap-reveal'));
+
+            // Bottom CTA section text
+            section.querySelectorAll('.flex.justify-between > *').forEach(el => el.classList.add('gsap-reveal'));
+            // Kiosk section wrapper
+            section.querySelectorAll('.border.border-warm-sand-500').forEach(el => el.classList.add('gsap-reveal'));
+
+            // For split sections where the left text is in a plain wrapper inside a grid
+            const grid = section.querySelector('.grid');
+            if (grid) {
+                const firstChild = grid.firstElementChild;
+                if (firstChild && !firstChild.className.includes('bg-')) {
+                    firstChild.classList.remove('gsap-reveal');
+                    Array.from(firstChild.children).forEach(el => el.classList.add('gsap-reveal'));
+                }
+            }
+
+            // Footer text items
+            if (section.tagName.toLowerCase() === 'footer') {
+                section.querySelectorAll('h4, ul > li, p, .flex.items-center').forEach(el => el.classList.add('gsap-reveal'));
+            }
+        });
+
+        animatedSections.forEach((section) => {
+            const targets = section.querySelectorAll('.gsap-reveal');
+            if (targets.length > 0) {
+                // Staggered animation for children
+                gsap.from(targets, {
+                    scrollTrigger: {
+                        trigger: section,
+                        start: "top 85%", // Trigger when the top of the section hits 85% of the viewport height
+                        toggleActions: "play none none reverse"
+                    },
+                    y: 40,
+                    opacity: 0,
+                    duration: 0.8,
+                    stagger: 0.15,
+                    ease: "power3.out"
+                });
+            } else {
+                // Fallback to animating the entire section if no children tagged
+                gsap.from(section, {
+                    scrollTrigger: {
+                        trigger: section,
+                        start: "top 85%",
+                        toggleActions: "play none none reverse"
+                    },
+                    y: 40,
+                    opacity: 0,
+                    duration: 0.8,
+                    ease: "power3.out"
+                });
+            }
+        });
     </script>
 </body>
 
