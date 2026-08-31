@@ -1,0 +1,819 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Sightro</title>
+    <link rel="icon" type="image/png" href="./assets/favicon.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./dist/output.css">
+    <!-- GSAP Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+</head>
+
+<body class="bg-white text-gray-900 font-sora antialiased selection:bg-brand-yellow selection:text-brand-dark">
+    <nav class="w-full bg-white/80 backdrop-blur-md border-b border-gray-100 sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+            <!-- Logo -->
+            <div class="flex items-center">
+                <a href="index.html"><img src="./assets/sightro-logo.png" alt="Sightro Logo" class="h-8 w-auto"></a>
+            </div>
+
+            <!-- Desktop Links -->
+            <div class="hidden md:flex items-center gap-8 text-sm font-medium text-gray-600">
+                <!-- Dropdown for Product -->
+                <div class="relative group">
+                    <button
+                        class="flex items-center gap-1 text-charcoal-500 hover:text-charcoal-800 transition-colors cursor-pointer outline-none font-medium">
+                        Product
+                        <svg class="w-4 h-4 text-gray-400 group-hover:text-brand-dark transition-transform group-hover:-rotate-180 duration-200"
+                            fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7">
+                            </path>
+                        </svg>
+                    </button>
+                    <!-- Dropdown Menu with hover bridge -->
+                    <div
+                        class="absolute left-0 top-full pt-5 w-56 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 transform translate-y-2 group-hover:translate-y-0 z-50">
+                        <div class="bg-white border border-gray-100 rounded-2xl shadow-xl overflow-hidden py-2">
+                            <a href="sightro-for-website.html"
+                                class="block px-5 py-3 text-sm text-charcoal-500 hover:text-charcoal-800 hover:bg-brand-cream  font-medium transition-colors">Sightro
+                                for Websites</a>
+                            <a href="public-experience-network.html"
+                                class="block px-5 py-3 text-sm text-charcoal-500 hover:text-charcoal-800 hover:bg-brand-cream  font-medium transition-colors">Public
+                                Experience Network</a>
+                        </div>
+                    </div>
+                </div>
+                <a href="how-it-works.html" class="text-charcoal-500 hover:text-charcoal-800 transition-colors">How it
+                    works</a>
+
+                <!-- Dropdown for Solutions -->
+                <div class="relative group">
+                    <button
+                        class="flex items-center gap-1 text-charcoal-500 hover:text-charcoal-800 transition-colors cursor-pointer outline-none font-medium">
+                        Solutions
+                        <svg class="w-4 h-4 text-gray-400 group-hover:text-brand-dark transition-transform group-hover:-rotate-180 duration-200"
+                            fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7">
+                            </path>
+                        </svg>
+                    </button>
+                    <!-- Dropdown Menu with hover bridge -->
+                    <div
+                        class="absolute left-0 top-full pt-5 w-56 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 transform translate-y-2 group-hover:translate-y-0 z-50">
+                        <div class="bg-white border border-gray-100 rounded-2xl shadow-xl overflow-hidden py-2">
+                            <a href="developers.html"
+                                class="block px-5 py-3 text-sm text-charcoal-500 hover:text-charcoal-800 hover:bg-brand-cream  font-medium transition-colors">Developers
+                            </a>
+                            <a href="brokers.html"
+                                class="block px-5 py-3 text-sm text-charcoal-500 hover:text-charcoal-800 hover:bg-brand-cream  font-medium transition-colors">Brokers
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <a href="results.html" class="text-charcoal-500 hover:text-charcoal-800 transition-colors">Results</a>
+                <a href="pricing.html" class="text-charcoal-500 hover:text-charcoal-800 transition-colors">Pricing</a>
+            </div>
+
+            <!-- CTA -->
+            <div class="hidden md:flex items-center gap-4">
+                <a href="sightro-in-action.html"
+                    class="px-5 py-2.5 rounded-full bg-ink-navy-900 text-white text-sm font-medium hover:bg-brass-gold-500 hover:-translate-y-1 transition-all duration-300 cursor-pointer">
+                    Experience Sightro Live
+                </a>
+            </div>
+
+            <!-- Mobile Menu Button -->
+            <button id="mobile-menu-btn"
+                class="md:hidden flex items-center p-2 text-gray-600 hover:text-brand-dark focus:outline-none cursor-pointer"
+                aria-label="Toggle mobile menu">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7">
+                    </path>
+                </svg>
+            </button>
+        </div>
+
+        <!-- Mobile Menu Overlay -->
+        <div id="mobile-menu"
+            class="hidden md:hidden absolute top-20 left-0 w-full bg-white border-b border-gray-100 shadow-xl flex-col">
+            <div class="px-6 py-6 flex flex-col gap-5 text-base font-medium text-gray-600">
+                <div class="flex flex-col gap-3">
+                    <div class="text-gray-400 text-xs uppercase tracking-widest font-bold">Product</div>
+                    <a href="sightro-for-website.html"
+                        class="pl-4 text-charcoal-500 hover:text-charcoal-800 transition-colors">Web
+                        Experiences</a>
+                    <a href="public-experience-network.html"
+                        class="pl-4 text-charcoal-500 hover:text-charcoal-800 transition-colors">Hub for
+                        Sales</a>
+                </div>
+                <a href="how-it-works.html" class="text-charcoal-500 hover:text-charcoal-800 transition-colors">How it
+                    works</a>
+                <div class="flex flex-col gap-3">
+                    <div class="text-gray-400 text-xs uppercase tracking-widest font-bold">Solutions</div>
+                    <a href="developers.html"
+                        class="pl-4 text-charcoal-500 hover:text-charcoal-800 transition-colors">Developers
+                    </a>
+                    <a href="brokers.html"
+                        class="pl-4 text-charcoal-500 hover:text-charcoal-800 transition-colors">Brokers
+                    </a>
+                </div>
+                <a href="results.html" class="text-charcoal-500 hover:text-charcoal-800 transition-colors">Results</a>
+                <a href="pricing.html" class="text-charcoal-500 hover:text-charcoal-800 transition-colors">Pricing</a>
+                <div class="pt-5 mt-2 border-t border-gray-100">
+                    <button
+                        class="w-full px-5 py-3 rounded-full bg-ink-navy-900 text-white font-medium hover:bg-brass-gold-500 hover:-translate-y-1 transition-all duration-300 cursor-pointer">
+                        Sign in to Sightro Hub
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="bg-ink-navy-900 pt-24 md:pt-32 pb-24 md:pb-40 px-6 md:px-8">
+            <div class="max-w-7xl mx-auto relative z-10 text-left">
+                <div class="max-w-7xl mx-auto">
+                    <h1 class="text-40 md:text-52 lg:text-64 font-medium mb-6 leading-tight text-white">
+                        We’re Here to Help You Succeed
+                    </h1>
+                    <p class="text-16 md:text-18 lg:text-20 text-gray-300 leading-relaxed font-normal max-w-7xl mx-auto mb-4">
+                        Sightro is built to be simple to deploy and easy to manage, but when you need help, our support
+                        team is ready.
+                    </p>
+                    <p class="text-16 md:text-18 lg:text-20 text-gray-300 leading-relaxed font-normal max-w-7xl mx-auto">
+                        Whether you’re setting up your first property, managing leads, or exploring advanced features,
+                        you’ll find answers below.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Support -->
+        <section class="bg-white py-12 md:py-16 lg:py-20 px-6 md:px-8 mt-[-20px] md:mt-[-40px]">
+            <div class="max-w-7xl mx-auto">
+                <div class="bg-warm-sand-100 border border-warm-sand-500 rounded-2xl p-10 relative z-20 text-center">
+                    <h2 class="text-32 md:text-40 font-semibold text-charcoal-900 mb-6">Contact Support</h2>
+                    <p class="text-16 md:text-18 text-charcoal-600 mb-2">
+                        For any questions, issues, or custom requests, reach us at:
+                        <a href="mailto:support@sightro.ai"
+                            class="text-brass-gold-500 font-medium hover:underline">support@sightro.ai</a>
+                    </p>
+                    <p class="text-16 md:text-18 text-charcoal-600">
+                        We typically respond within <span class="font-bold">one business day</span>.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQs Section -->
+        <section class="bg-white py-16 md:py-20 lg:py-24 px-6 md:px-8">
+            <div class="max-w-7xl mx-auto">
+                <h2 class="text-32 md:text-40 lg:text-48 font-semibold text-charcoal-900 mb-12 text-center">Frequently Asked
+                    Questions</h2>
+
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12">
+                    <!-- Getting Started -->
+                    <div>
+                        <h3 class="text-20 md:text-24 font-bold text-charcoal-900 mb-6 border-b border-gray-200 pb-2">Getting
+                            Started</h3>
+                        <div class="space-y-4">
+                            <div
+                                class="bg-white rounded-lg shadow-sm border border-gray-100 overflow-hidden accordion-group">
+                                <button
+                                    class="w-full px-6 py-5 text-left flex justify-between items-center focus:outline-none accordion-trigger">
+                                    <span class="font-semibold text-charcoal-800 pr-4 text-16 md:text-18">How do I install Sightro
+                                        on my website?</span>
+                                    <svg class="icon w-5 h-5 text-brass-gold-500 transform transition-transform duration-300 flex-shrink-0"
+                                        fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M19 9l-7 7-7-7"></path>
+                                    </svg>
+                                </button>
+                                <div class="accordion-content max-h-0 overflow-hidden transition-all duration-300">
+                                    <div class="px-6 pb-5 text-charcoal-600 text-14 md:text-16">
+                                        Sightro is installed using a lightweight embed script. Once added, the widget
+                                        appears automatically on your selected property pages. No backend changes are
+                                        required.
+                                    </div>
+                                </div>
+                            </div>
+                            <div
+                                class="bg-white rounded-lg shadow-sm border border-gray-100 overflow-hidden accordion-group">
+                                <button
+                                    class="w-full px-6 py-5 text-left flex justify-between items-center focus:outline-none accordion-trigger">
+                                    <span class="font-semibold text-charcoal-800 pr-4 text-16 md:text-18">Can I add Sightro to
+                                        multiple properties or pages?</span>
+                                    <svg class="icon w-5 h-5 text-brass-gold-500 transform transition-transform duration-300 flex-shrink-0"
+                                        fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M19 9l-7 7-7-7"></path>
+                                    </svg>
+                                </button>
+                                <div class="accordion-content max-h-0 overflow-hidden transition-all duration-300">
+                                    <div class="px-6 pb-5 text-charcoal-600 text-14 md:text-16">
+                                        Yes. Depending on your plan, you can activate Sightro on multiple property
+                                        pages and manage them individually from your dashboard.
+                                    </div>
+                                </div>
+                            </div>
+                            <div
+                                class="bg-white rounded-lg shadow-sm border border-gray-100 overflow-hidden accordion-group">
+                                <button
+                                    class="w-full px-6 py-5 text-left flex justify-between items-center focus:outline-none accordion-trigger">
+                                    <span class="font-semibold text-charcoal-800 pr-4 text-16 md:text-18">Do I need any technical
+                                        expertise to use Sightro?</span>
+                                    <svg class="icon w-5 h-5 text-brass-gold-500 transform transition-transform duration-300 flex-shrink-0"
+                                        fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M19 9l-7 7-7-7"></path>
+                                    </svg>
+                                </button>
+                                <div class="accordion-content max-h-0 overflow-hidden transition-all duration-300">
+                                    <div class="px-6 pb-5 text-charcoal-600 text-14 md:text-16">
+                                        No. Sightro is designed for sales and marketing teams. Setup, configuration,
+                                        and lead management can all be done without technical support.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- AI & Experience -->
+                    <div>
+                        <h3 class="text-20 md:text-24 font-bold text-charcoal-900 mb-6 border-b border-gray-200 pb-2">AI &
+                            Experience</h3>
+                        <div class="space-y-4">
+                            <div
+                                class="bg-white rounded-lg shadow-sm border border-gray-100 overflow-hidden accordion-group">
+                                <button
+                                    class="w-full px-6 py-5 text-left flex justify-between items-center focus:outline-none accordion-trigger">
+                                    <span class="font-semibold text-charcoal-800 pr-4 text-16 md:text-18">How does the AI generate
+                                        interior designs?</span>
+                                    <svg class="icon w-5 h-5 text-brass-gold-500 transform transition-transform duration-300 flex-shrink-0"
+                                        fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M19 9l-7 7-7-7"></path>
+                                    </svg>
+                                </button>
+                                <div class="accordion-content max-h-0 overflow-hidden transition-all duration-300">
+                                    <div class="px-6 pb-5 text-charcoal-600 text-14 md:text-16">
+                                        Sightro uses advanced AI models trained on interior design and real-estate
+                                        imagery to generate realistic room transformations based on user input and style
+                                        selection.
+                                    </div>
+                                </div>
+                            </div>
+                            <div
+                                class="bg-white rounded-lg shadow-sm border border-gray-100 overflow-hidden accordion-group">
+                                <button
+                                    class="w-full px-6 py-5 text-left flex justify-between items-center focus:outline-none accordion-trigger">
+                                    <span class="font-semibold text-charcoal-800 pr-4 text-16 md:text-18">Can I control the design
+                                        styles shown to visitors?</span>
+                                    <svg class="icon w-5 h-5 text-brass-gold-500 transform transition-transform duration-300 flex-shrink-0"
+                                        fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M19 9l-7 7-7-7"></path>
+                                    </svg>
+                                </button>
+                                <div class="accordion-content max-h-0 overflow-hidden transition-all duration-300">
+                                    <div class="px-6 pb-5 text-charcoal-600 text-14 md:text-16">
+                                        Yes. You can enable or disable specific styles, rooms, and prompts to match your
+                                        project branding and buyer profile.
+                                    </div>
+                                </div>
+                            </div>
+                            <div
+                                class="bg-white rounded-lg shadow-sm border border-gray-100 overflow-hidden accordion-group">
+                                <button
+                                    class="w-full px-6 py-5 text-left flex justify-between items-center focus:outline-none accordion-trigger">
+                                    <span class="font-semibold text-charcoal-800 pr-4 text-16 md:text-18">Will the AI change the
+                                        actual layout of the room?</span>
+                                    <svg class="icon w-5 h-5 text-brass-gold-500 transform transition-transform duration-300 flex-shrink-0"
+                                        fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M19 9l-7 7-7-7"></path>
+                                    </svg>
+                                </button>
+                                <div class="accordion-content max-h-0 overflow-hidden transition-all duration-300">
+                                    <div class="px-6 pb-5 text-charcoal-600 text-14 md:text-16">
+                                        No. Sightro preserves the room’s structure while enhancing it visually, helping
+                                        buyers imagine the space without misrepresenting the property.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Leads & Sales -->
+                    <div>
+                        <h3 class="text-20 md:text-24 font-bold text-charcoal-900 mb-6 border-b border-gray-200 pb-2">Leads & Sales
+                        </h3>
+                        <div class="space-y-4">
+                            <div
+                                class="bg-white rounded-lg shadow-sm border border-gray-100 overflow-hidden accordion-group">
+                                <button
+                                    class="w-full px-6 py-5 text-left flex justify-between items-center focus:outline-none accordion-trigger">
+                                    <span class="font-semibold text-charcoal-800 pr-4 text-16 md:text-18">What information do I
+                                        receive with each lead?</span>
+                                    <svg class="icon w-5 h-5 text-brass-gold-500 transform transition-transform duration-300 flex-shrink-0"
+                                        fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M19 9l-7 7-7-7"></path>
+                                    </svg>
+                                </button>
+                                <div class="accordion-content max-h-0 overflow-hidden transition-all duration-300">
+                                    <div class="px-6 pb-5 text-charcoal-600 text-14 md:text-16">
+                                        In addition to contact details, Sightro captures engagement insights such as
+                                        rooms explored, styles selected, number of interactions, and saved designs. This
+                                        helps sales teams tailor conversations from the first call.
+                                    </div>
+                                </div>
+                            </div>
+                            <div
+                                class="bg-white rounded-lg shadow-sm border border-gray-100 overflow-hidden accordion-group">
+                                <button
+                                    class="w-full px-6 py-5 text-left flex justify-between items-center focus:outline-none accordion-trigger">
+                                    <span class="font-semibold text-charcoal-800 pr-4 text-16 md:text-18">Where can I view my
+                                        leads?</span>
+                                    <svg class="icon w-5 h-5 text-brass-gold-500 transform transition-transform duration-300 flex-shrink-0"
+                                        fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M19 9l-7 7-7-7"></path>
+                                    </svg>
+                                </button>
+                                <div class="accordion-content max-h-0 overflow-hidden transition-all duration-300">
+                                    <div class="px-6 pb-5 text-charcoal-600 text-14 md:text-16">
+                                        All leads are available in your Sightro dashboard. You can also export leads or
+                                        connect Sightro to supported CRMs on higher plans.
+                                    </div>
+                                </div>
+                            </div>
+                            <div
+                                class="bg-white rounded-lg shadow-sm border border-gray-100 overflow-hidden accordion-group">
+                                <button
+                                    class="w-full px-6 py-5 text-left flex justify-between items-center focus:outline-none accordion-trigger">
+                                    <span class="font-semibold text-charcoal-800 pr-4 text-16 md:text-18">Does Sightro integrate
+                                        with CRMs?</span>
+                                    <svg class="icon w-5 h-5 text-brass-gold-500 transform transition-transform duration-300 flex-shrink-0"
+                                        fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M19 9l-7 7-7-7"></path>
+                                    </svg>
+                                </button>
+                                <div class="accordion-content max-h-0 overflow-hidden transition-all duration-300">
+                                    <div class="px-6 pb-5 text-charcoal-600 text-14 md:text-16">
+                                        Yes. CRM integrations are available on Growth and Enterprise plans. Custom
+                                        integrations are also supported.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Pricing & Billing -->
+                    <div>
+                        <h3 class="text-20 md:text-24 font-bold text-charcoal-900 mb-6 border-b border-gray-200 pb-2">Pricing &
+                            Billing</h3>
+                        <div class="space-y-4">
+                            <div
+                                class="bg-white rounded-lg shadow-sm border border-gray-100 overflow-hidden accordion-group">
+                                <button
+                                    class="w-full px-6 py-5 text-left flex justify-between items-center focus:outline-none accordion-trigger">
+                                    <span class="font-semibold text-charcoal-800 pr-4 text-16 md:text-18">How is pricing
+                                        calculated?</span>
+                                    <svg class="icon w-5 h-5 text-brass-gold-500 transform transition-transform duration-300 flex-shrink-0"
+                                        fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M19 9l-7 7-7-7"></path>
+                                    </svg>
+                                </button>
+                                <div class="accordion-content max-h-0 overflow-hidden transition-all duration-300">
+                                    <div class="px-6 pb-5 text-charcoal-600 text-14 md:text-16">
+                                        Pricing is based on monthly AI usage and feature access. You can choose a plan
+                                        that fits your project size and scale up as needed.
+                                    </div>
+                                </div>
+                            </div>
+                            <div
+                                class="bg-white rounded-lg shadow-sm border border-gray-100 overflow-hidden accordion-group">
+                                <button
+                                    class="w-full px-6 py-5 text-left flex justify-between items-center focus:outline-none accordion-trigger">
+                                    <span class="font-semibold text-charcoal-800 pr-4 text-16 md:text-18">Can I upgrade or
+                                        downgrade my plan?</span>
+                                    <svg class="icon w-5 h-5 text-brass-gold-500 transform transition-transform duration-300 flex-shrink-0"
+                                        fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M19 9l-7 7-7-7"></path>
+                                    </svg>
+                                </button>
+                                <div class="accordion-content max-h-0 overflow-hidden transition-all duration-300">
+                                    <div class="px-6 pb-5 text-charcoal-600 text-14 md:text-16">
+                                        Yes. Plans can be changed at any time from your dashboard.
+                                    </div>
+                                </div>
+                            </div>
+                            <div
+                                class="bg-white rounded-lg shadow-sm border border-gray-100 overflow-hidden accordion-group">
+                                <button
+                                    class="w-full px-6 py-5 text-left flex justify-between items-center focus:outline-none accordion-trigger">
+                                    <span class="font-semibold text-charcoal-800 pr-4 text-16 md:text-18">Is there a free
+                                        trial?</span>
+                                    <svg class="icon w-5 h-5 text-brass-gold-500 transform transition-transform duration-300 flex-shrink-0"
+                                        fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M19 9l-7 7-7-7"></path>
+                                    </svg>
+                                </button>
+                                <div class="accordion-content max-h-0 overflow-hidden transition-all duration-300">
+                                    <div class="px-6 pb-5 text-charcoal-600 text-14 md:text-16">
+                                        Yes. Sightro offers a trial so you can experience the product before
+                                        committing.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Account & Management -->
+                    <div>
+                        <h3 class="text-20 md:text-24 font-bold text-charcoal-900 mb-6 border-b border-gray-200 pb-2">Account &
+                            Management</h3>
+                        <div class="space-y-4">
+                            <div
+                                class="bg-white rounded-lg shadow-sm border border-gray-100 overflow-hidden accordion-group">
+                                <button
+                                    class="w-full px-6 py-5 text-left flex justify-between items-center focus:outline-none accordion-trigger">
+                                    <span class="font-semibold text-charcoal-800 pr-4 text-16 md:text-18">Can I pause or deactivate
+                                        Sightro on a property?</span>
+                                    <svg class="icon w-5 h-5 text-brass-gold-500 transform transition-transform duration-300 flex-shrink-0"
+                                        fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M19 9l-7 7-7-7"></path>
+                                    </svg>
+                                </button>
+                                <div class="accordion-content max-h-0 overflow-hidden transition-all duration-300">
+                                    <div class="px-6 pb-5 text-charcoal-600 text-14 md:text-16">
+                                        Yes. You can activate or deactivate PropDeck on individual properties at any
+                                        time.
+                                    </div>
+                                </div>
+                            </div>
+                            <div
+                                class="bg-white rounded-lg shadow-sm border border-gray-100 overflow-hidden accordion-group">
+                                <button
+                                    class="w-full px-6 py-5 text-left flex justify-between items-center focus:outline-none accordion-trigger">
+                                    <span class="font-semibold text-charcoal-800 pr-4 text-16 md:text-18">Is Sightro
+                                        mobile-friendly?</span>
+                                    <svg class="icon w-5 h-5 text-brass-gold-500 transform transition-transform duration-300 flex-shrink-0"
+                                        fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M19 9l-7 7-7-7"></path>
+                                    </svg>
+                                </button>
+                                <div class="accordion-content max-h-0 overflow-hidden transition-all duration-300">
+                                    <div class="px-6 pb-5 text-charcoal-600 text-14 md:text-16">
+                                        Absolutely. PropDeck is optimized for desktop, tablet, and mobile experiences.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Security & Reliability -->
+                    <div>
+                        <h3 class="text-20 md:text-24 font-bold text-charcoal-900 mb-6 border-b border-gray-200 pb-2">Security &
+                            Reliability</h3>
+                        <div class="space-y-4">
+                            <div
+                                class="bg-white rounded-lg shadow-sm border border-gray-100 overflow-hidden accordion-group">
+                                <button
+                                    class="w-full px-6 py-5 text-left flex justify-between items-center focus:outline-none accordion-trigger">
+                                    <span class="font-semibold text-charcoal-800 pr-4 text-16 md:text-18">Is my data secure?</span>
+                                    <svg class="icon w-5 h-5 text-brass-gold-500 transform transition-transform duration-300 flex-shrink-0"
+                                        fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M19 9l-7 7-7-7"></path>
+                                    </svg>
+                                </button>
+                                <div class="accordion-content max-h-0 overflow-hidden transition-all duration-300">
+                                    <div class="px-6 pb-5 text-charcoal-600 text-14 md:text-16">
+                                        Yes. Sightro follows modern security best practices to ensure your data and
+                                        your buyers’ information are protected.
+                                    </div>
+                                </div>
+                            </div>
+                            <div
+                                class="bg-white rounded-lg shadow-sm border border-gray-100 overflow-hidden accordion-group">
+                                <button
+                                    class="w-full px-6 py-5 text-left flex justify-between items-center focus:outline-none accordion-trigger">
+                                    <span class="font-semibold text-charcoal-800 pr-4 text-16 md:text-18">Does Sightro affect
+                                        website performance?</span>
+                                    <svg class="icon w-5 h-5 text-brass-gold-500 transform transition-transform duration-300 flex-shrink-0"
+                                        fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M19 9l-7 7-7-7"></path>
+                                    </svg>
+                                </button>
+                                <div class="accordion-content max-h-0 overflow-hidden transition-all duration-300">
+                                    <div class="px-6 pb-5 text-charcoal-600 text-14 md:text-16">
+                                        No. The widget is lightweight and loads asynchronously to ensure minimal impact
+                                        on page speed.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Custom Needs CTA (Bento Box Layout - Flexbox Fallback) -->
+        <section class="bg-white py-16 md:py-20 lg:py-24 px-6 md:px-8 pb-24 md:pb-32">
+            <div class="max-w-7xl mx-auto">
+                <div class="flex flex-col lg:flex-row gap-6">
+
+                    <!-- Left Column: Main CTA Card -->
+                    <div class="w-full lg:w-1/2 flex">
+                        <div
+                            class="w-full bg-ink-navy-900 rounded-[2rem] p-10 lg:p-14 flex flex-col justify-center relative overflow-hidden group shadow-xl rounded-2xl">
+                            <div
+                                class="absolute -top-24 -right-24 w-96 h-96 bg-brass-gold-500/20 rounded-full blur-3xl opacity-50 group-hover:opacity-70 transition-opacity duration-700 pointer-events-none">
+                            </div>
+                            <div
+                                class="absolute -bottom-24 -left-24 w-96 h-96 bg-brand-yellow/10 rounded-full blur-3xl opacity-50 group-hover:opacity-70 transition-opacity duration-700 pointer-events-none">
+                            </div>
+                            <div class="relative z-10">
+                                <h3 class="text-32 md:text-40 lg:text-48 font-semibold text-white leading-tight mb-6">
+                                    Enterprise scale,<br>tailored for you.
+                                </h3>
+                                <p class="text-16 md:text-18 text-gray-300 mb-10 max-w-md leading-relaxed">
+                                    If you’re a large developer or agency, our team is ready to help you deploy Sightro
+                                    seamlessly across your portfolio.
+                                </p>
+                                <a href="mailto:support@sightro.ai">
+
+                                    <button
+                                        class="px-6 py-3 text-16 md:text-18 rounded-full bg-brass-gold-500 hover:bg-brass-gold-600 hover:-translate-y-1 text-ink-navy-900 font-semibold transition-all duration-300 shadow-lg cursor-pointer">
+                                        Contact Enterprise Team
+                                    </button>
+                                </a>
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Right Column: Features -->
+                    <div class="w-full lg:w-1/2 flex flex-col gap-6">
+
+                        <!-- Top Row: F1 & F2 -->
+                        <div class="flex flex-col sm:flex-row gap-6">
+                            <!-- Feature 1: Custom Branding -->
+                            <div
+                                class="w-full sm:w-1/2 bg-warm-sand-100 border border-warm-sand-500 p-8 flex flex-col items-start justify-between relative overflow-hidden group hover:shadow-xl transition-all duration-300 hover:-translate-y-1 rounded-2xl">
+                                <div
+                                    class="w-12 h-12 rounded-2xl bg-white shadow-sm flex items-center justify-center text-brass-gold-500 mb-6 group-hover:scale-110 transition-transform duration-300">
+                                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17h.01">
+                                        </path>
+                                    </svg>
+                                </div>
+                                <div>
+                                    <h4 class="text-charcoal-900 font-bold text-18 md:text-20 mb-2">Custom Branding</h4>
+                                    <p class="text-charcoal-500 text-14 md:text-16 leading-relaxed">Match your visual identity
+                                        perfectly.</p>
+                                </div>
+                            </div>
+
+                            <!-- Feature 2: White-Label -->
+                            <div
+                                class="w-full sm:w-1/2 bg-warm-sand-100 border border-warm-sand-500 p-8 flex flex-col items-start justify-between relative overflow-hidden group hover:shadow-xl transition-all duration-300 hover:-translate-y-1 rounded-2xl">
+                                <div
+                                    class="w-12 h-12 rounded-2xl bg-white shadow-sm flex items-center justify-center text-brass-gold-500 mb-6 group-hover:scale-110 transition-transform duration-300">
+                                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z">
+                                        </path>
+                                    </svg>
+                                </div>
+                                <div>
+                                    <h4 class="text-charcoal-900 font-bold text-18 md:text-20 mb-2">White-Label</h4>
+                                    <p class="text-charcoal-500 text-14 md:text-16 leading-relaxed">Invisible infrastructure.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Middle Row: F3 -->
+                        <div
+                            class="w-full bg-warm-sand-100 border border-warm-sand-500 p-8 flex flex-col justify-between relative overflow-hidden group hover:shadow-xl transition-all duration-300 hover:-translate-y-1 rounded-2xl">
+
+                            <div
+                                class="w-12 h-12 rounded-2xl bg-white shadow-sm flex items-center justify-center text-brass-gold-500 mb-6 group-hover:scale-110 transition-transform duration-300 relative z-10">
+                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z">
+                                    </path>
+                                </svg>
+                            </div>
+                            <div class="relative z-10">
+                                <h4 class="text-charcoal-900 font-bold text-18 md:text-20 mb-2">Advanced Analytics</h4>
+                                <p class="text-charcoal-500 text-14 md:text-16 leading-relaxed max-w-xs">Gain deep insights into
+                                    how buyers interact with your virtual spaces.</p>
+                            </div>
+                        </div>
+
+                        <!-- Bottom Row: F4 & F5 -->
+                        <div class="flex flex-col sm:flex-row gap-6">
+                            <!-- Feature 4: Dedicated Support -->
+                            <div
+                                class="w-full sm:w-1/2 bg-warm-sand-100 border border-warm-sand-500 p-8 flex flex-col items-start relative overflow-hidden group hover:shadow-xl transition-all duration-300 hover:-translate-y-1 rounded-2xl">
+                                <div
+                                    class="w-12 h-12 rounded-2xl bg-white shadow-sm flex items-center justify-center text-brass-gold-500 mb-6 group-hover:scale-110 transition-transform duration-300">
+                                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M18.364 5.636l-3.536 3.536m0 5.656l3.536 3.536M9.172 9.172L5.636 5.636m3.536 9.192l-3.536 3.536M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-5 0a4 4 0 11-8 0 4 4 0 018 0z">
+                                        </path>
+                                    </svg>
+                                </div>
+                                <div>
+                                    <h4 class="text-charcoal-900 font-bold text-18 md:text-20 mb-2">Priority Support</h4>
+                                    <p class="text-charcoal-500 text-14 md:text-16 leading-relaxed">Direct engineering access.</p>
+                                </div>
+                            </div>
+
+                            <!-- Feature 5: Multi-Project -->
+                            <div
+                                class="w-full sm:w-1/2 bg-warm-sand-100 border border-warm-sand-500  p-8 flex flex-col items-start relative overflow-hidden group hover:shadow-xl transition-all duration-300 hover:-translate-y-1 rounded-2xl ">
+                                <div
+                                    class="w-12 h-12 rounded-2xl bg-white shadow-sm flex items-center justify-center text-brass-gold-500 mb-6 group-hover:scale-110 transition-transform duration-300">
+                                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10">
+                                        </path>
+                                    </svg>
+                                </div>
+                                <div>
+                                    <h4 class="text-charcoal-900 font-bold text-18 md:text-20 mb-2">Unified Control</h4>
+                                    <p class="text-charcoal-500 text-14 md:text-16 leading-relaxed">Manage dozens of properties.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-brand-darker py-12 md:py-16 lg:py-20 px-6 md:px-8">
+        <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-start md:items-center text-sm">
+            <div class="mb-8 md:mb-0">
+                <div class="flex items-center mb-4">
+                    <a href="index.html"><img src="./assets/logo.png" alt="Sightro Logo" class="h-10 w-auto"></a>
+                </div>
+                <p class="text-gray-400">See how Sightro can transform your property<br>experience.</p>
+            </div>
+
+            <div>
+                <ul class="flex flex-wrap gap-8 text-gray-300">
+                    <li><a href="about.html" class="hover:text-white transition-colors">About</a></li>
+                    <li><a href="results.html" class="hover:text-white transition-colors">Results</a></li>
+                    <li><a href="pricing.html" class="hover:text-white transition-colors">Pricing</a></li>
+                    <li><a href="contact.html" class="hover:text-white transition-colors">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div
+            class="max-w-7xl mx-auto mt-12 pt-8 border-t border-gray-800 text-gray-500 text-xs flex flex-col md:flex-row justify-between items-center">
+            <p>&copy; 2026 Sightro. All rights reserved.</p>
+            <div class="flex gap-4 mt-4 md:mt-0">
+                <a href="privacy.html" class="hover:text-white transition-colors">Privacy</a>
+                <span>&middot;</span>
+                <a href="terms.html" class="hover:text-white transition-colors">Terms</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile Menu Toggle
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        if (mobileMenuBtn && mobileMenu) {
+            mobileMenuBtn.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+                mobileMenu.classList.toggle('flex');
+            });
+        }
+
+        // Accordion functionality
+        document.querySelectorAll('.accordion-group').forEach(group => {
+            const trigger = group.querySelector('.accordion-trigger');
+            const content = group.querySelector('.accordion-content');
+
+            // Initial setup to ensure it's closed
+            content.style.maxHeight = '0px';
+            content.style.overflow = 'hidden';
+            content.style.transition = 'max-height 0.3s ease-in-out';
+            const icon = group.querySelector('.icon');
+            if (icon) {
+                icon.style.transition = 'transform 0.3s ease-in-out';
+            }
+
+            trigger.addEventListener('click', (e) => {
+                e.preventDefault();
+                const isOpen = group.classList.contains('is-open');
+
+                // Optional: close other accordions
+                document.querySelectorAll('.accordion-group').forEach(otherGroup => {
+                    if (otherGroup !== group && otherGroup.classList.contains('is-open')) {
+                        otherGroup.classList.remove('is-open');
+                        otherGroup.querySelector('.accordion-content').style.maxHeight = '0px';
+                        const otherIcon = otherGroup.querySelector('.icon');
+                        if (otherIcon) otherIcon.style.transform = 'rotate(0deg)';
+                    }
+                });
+
+                if (isOpen) {
+                    group.classList.remove('is-open');
+                    content.style.maxHeight = '0px';
+                    if (icon) icon.style.transform = 'rotate(0deg)';
+                } else {
+                    group.classList.add('is-open');
+                    content.style.maxHeight = content.scrollHeight + "px";
+                    if (icon) icon.style.transform = 'rotate(-180deg)';
+                }
+            });
+        });
+
+        // GSAP Scroll Animations
+        gsap.registerPlugin(ScrollTrigger);
+
+        // Select elements to animate
+        const animatedSections = document.querySelectorAll('header, section, footer');
+
+        // Auto-tag elements for stagger reveal based on layout
+        animatedSections.forEach(section => {
+            section.querySelectorAll('.max-w-3xl > *, .max-w-2xl > *, .max-w-xl > *, .max-w-4xl > *, .max-w-7xl > h2, .max-w-7xl > p').forEach(el => el.classList.add('gsap-reveal'));
+            section.querySelectorAll('.grid > div').forEach(el => el.classList.add('gsap-reveal'));
+            section.querySelectorAll('.mb-16 > *, .mb-10 > *, .mb-8 > *, .mb-6 > *').forEach(el => el.classList.add('gsap-reveal'));
+
+            const grid = section.querySelector('.grid');
+            if (grid) {
+                const firstChild = grid.firstElementChild;
+                if (firstChild && !firstChild.className.includes('bg-')) {
+                    firstChild.classList.remove('gsap-reveal');
+                    Array.from(firstChild.children).forEach(el => el.classList.add('gsap-reveal'));
+                }
+            }
+
+            section.querySelectorAll('.bg-ink-navy-900.rounded-3xl > *').forEach(el => el.classList.add('gsap-reveal'));
+
+            if (section.tagName.toLowerCase() === 'footer') {
+                section.querySelectorAll('h4, ul > li, p, .flex.items-center').forEach(el => el.classList.add('gsap-reveal'));
+            }
+        });
+
+        animatedSections.forEach((section) => {
+            const targets = section.querySelectorAll('.gsap-reveal');
+            if (targets.length > 0) {
+                gsap.from(targets, {
+                    scrollTrigger: {
+                        trigger: section,
+                        start: "top 85%",
+                        toggleActions: "play none none reverse"
+                    },
+                    y: 40,
+                    opacity: 0,
+                    duration: 0.8,
+                    stagger: 0.15,
+                    ease: "power3.out"
+                });
+            } else {
+                gsap.from(section, {
+                    scrollTrigger: {
+                        trigger: section,
+                        start: "top 85%",
+                        toggleActions: "play none none reverse"
+                    },
+                    y: 40,
+                    opacity: 0,
+                    duration: 0.8,
+                    ease: "power3.out"
+                });
+            }
+        });
+    </script>
+</body>
+
+</html>
