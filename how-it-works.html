@@ -164,7 +164,7 @@
     <main>
         <!-- 1. Hero Section -->
         <section class="text-white pt-24 md:pt-32 pb-24 md:pb-40 px-6 md:px-8 relative overflow-hidden"
-            style="background: linear-gradient(95deg, rgba(10, 25, 47, 1.0) 0%, rgba(10, 25, 47, 1.0) 25%,  rgba(10, 25, 47, 1.0) 50%, rgba(10, 25, 47, 0.20) 100%), url('./assets/how-it-works-hero.webp') center/cover no-repeat;">
+            style="background: linear-gradient(95deg, rgba(10, 25, 47, 0.80) 0%, rgba(10, 25, 47, 0.80) 25%,  rgba(10, 25, 47, 0.80) 50%, rgba(10, 25, 47, 0.80) 100%), url('./assets/how-it-works-hero.webp') center/cover no-repeat;">
             <div class="max-w-7xl mx-auto relative z-10">
                 <div class="max-w-3xl">
                     <div
@@ -424,382 +424,401 @@
         </section>
 
 
-        <!-- FAQs Section -->
-        <section class="bg-white py-16 md:py-20 lg:py-24 px-6 md:px-8">
+        <!-- FAQ Section -->
+        <section class="bg-[#fcfaf8] py-16 md:py-24 px-6 md:px-8 border-b border-gray-100">
             <div class="max-w-7xl mx-auto">
-                <h2 class="text-32 md:text-40 lg:text-48 font-semibold text-charcoal-900 mb-12 text-center">Frequently
-                    Asked
-                    Questions</h2>
-
-                <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12">
-                    <!-- Getting Started -->
+                <div class="flex flex-col md:flex-row md:items-end justify-between mb-10 gap-4">
                     <div>
-                        <h3 class="text-20 md:text-24 font-bold text-charcoal-900 mb-6 border-b border-gray-200 pb-2">
-                            Getting
-                            Started</h3>
-                        <div class="space-y-4">
-                            <div
-                                class="bg-white rounded-lg shadow-sm border border-gray-100 overflow-hidden accordion-group">
-                                <button
-                                    class="w-full px-6 py-5 text-left flex justify-between items-center focus:outline-none accordion-trigger">
-                                    <span class="font-semibold text-charcoal-800 pr-4 text-16 md:text-18">How do I
-                                        install Sightro
-                                        on my website?</span>
-                                    <svg class="icon w-5 h-5 text-brass-gold-500 transform transition-transform duration-300 flex-shrink-0"
-                                        fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <div class="text-11 md:text-12 font-bold text-brass-gold-500 mb-4 tracking-[0.15em] uppercase">
+                            YOUR QUESTIONS, ANSWERED
+                        </div>
+                        <h2
+                            class="text-32 md:text-40 lg:text-48 font-semibold text-ink-navy-900 leading-tight tracking-tight">
+                            Frequently Asked Questions
+                        </h2>
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12 lg:gap-x-16">
+                    <!-- Category: Getting
+                            Started -->
+                    <div>
+                        <div class="pb-4">
+                            <h3 class="text-20 md:text-24 font-bold text-ink-navy-900">Getting
+                                Started</h3>
+                        </div>
+                        <div class="accordion-group border-b border-gray-200">
+                            <button
+                                class="accordion-trigger w-full py-6 flex justify-between items-center text-left focus:outline-none cursor-pointer">
+                                <span class="text-16 md:text-18 font-medium text-charcoal-900">How do I
+                                    install Sightro
+                                    on my website?</span>
+                                <span
+                                    class="icon text-brass-gold-500 shrink-0 ml-4 transform transition-transform duration-300">
+                                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                            d="M19 9l-7 7-7-7"></path>
+                                            d="M12 6v12M6 12h12"></path>
                                     </svg>
-                                </button>
-                                <div class="accordion-content max-h-0 overflow-hidden transition-all duration-300">
-                                    <div class="px-6 pb-5 text-charcoal-600 text-14 md:text-16">
-                                        Sightro is installed using a lightweight embed script. Once added, the widget
-                                        appears automatically on your selected property pages. No backend changes are
-                                        required.
-                                    </div>
-                                </div>
+                                </span>
+                            </button>
+                            <div class="accordion-content max-h-0 overflow-hidden transition-all duration-300">
+                                <p class="pb-6 text-15 md:text-16 text-charcoal-600 leading-relaxed pr-8">
+                                    Sightro is installed using a lightweight embed script. Once added, the widget
+                                    appears automatically on your selected property pages. No backend changes are
+                                    required.
+                                </p>
                             </div>
-                            <div
-                                class="bg-white rounded-lg shadow-sm border border-gray-100 overflow-hidden accordion-group">
-                                <button
-                                    class="w-full px-6 py-5 text-left flex justify-between items-center focus:outline-none accordion-trigger">
-                                    <span class="font-semibold text-charcoal-800 pr-4 text-16 md:text-18">Can I add
-                                        Sightro to
-                                        multiple properties or pages?</span>
-                                    <svg class="icon w-5 h-5 text-brass-gold-500 transform transition-transform duration-300 flex-shrink-0"
-                                        fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        </div>
+                        <div class="accordion-group border-b border-gray-200">
+                            <button
+                                class="accordion-trigger w-full py-6 flex justify-between items-center text-left focus:outline-none cursor-pointer">
+                                <span class="text-16 md:text-18 font-medium text-charcoal-900">Can I add
+                                    Sightro to
+                                    multiple properties or pages?</span>
+                                <span
+                                    class="icon text-brass-gold-500 shrink-0 ml-4 transform transition-transform duration-300">
+                                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                            d="M19 9l-7 7-7-7"></path>
+                                            d="M12 6v12M6 12h12"></path>
                                     </svg>
-                                </button>
-                                <div class="accordion-content max-h-0 overflow-hidden transition-all duration-300">
-                                    <div class="px-6 pb-5 text-charcoal-600 text-14 md:text-16">
-                                        Yes. Depending on your plan, you can activate Sightro on multiple property
-                                        pages and manage them individually from your dashboard.
-                                    </div>
-                                </div>
+                                </span>
+                            </button>
+                            <div class="accordion-content max-h-0 overflow-hidden transition-all duration-300">
+                                <p class="pb-6 text-15 md:text-16 text-charcoal-600 leading-relaxed pr-8">
+                                    Yes. Depending on your plan, you can activate Sightro on multiple property
+                                    pages and manage them individually from your dashboard.
+                                </p>
                             </div>
-                            <div
-                                class="bg-white rounded-lg shadow-sm border border-gray-100 overflow-hidden accordion-group">
-                                <button
-                                    class="w-full px-6 py-5 text-left flex justify-between items-center focus:outline-none accordion-trigger">
-                                    <span class="font-semibold text-charcoal-800 pr-4 text-16 md:text-18">Do I need any
-                                        technical
-                                        expertise to use Sightro?</span>
-                                    <svg class="icon w-5 h-5 text-brass-gold-500 transform transition-transform duration-300 flex-shrink-0"
-                                        fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        </div>
+                        <div class="accordion-group border-b border-gray-200">
+                            <button
+                                class="accordion-trigger w-full py-6 flex justify-between items-center text-left focus:outline-none cursor-pointer">
+                                <span class="text-16 md:text-18 font-medium text-charcoal-900">Do I need any
+                                    technical
+                                    expertise to use Sightro?</span>
+                                <span
+                                    class="icon text-brass-gold-500 shrink-0 ml-4 transform transition-transform duration-300">
+                                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                            d="M19 9l-7 7-7-7"></path>
+                                            d="M12 6v12M6 12h12"></path>
                                     </svg>
-                                </button>
-                                <div class="accordion-content max-h-0 overflow-hidden transition-all duration-300">
-                                    <div class="px-6 pb-5 text-charcoal-600 text-14 md:text-16">
-                                        No. Sightro is designed for sales and marketing teams. Setup, configuration,
-                                        and lead management can all be done without technical support.
-                                    </div>
-                                </div>
+                                </span>
+                            </button>
+                            <div class="accordion-content max-h-0 overflow-hidden transition-all duration-300">
+                                <p class="pb-6 text-15 md:text-16 text-charcoal-600 leading-relaxed pr-8">
+                                    No. Sightro is designed for sales and marketing teams. Setup, configuration,
+                                    and lead management can all be done without technical support.
+                                </p>
                             </div>
                         </div>
                     </div>
-
-                    <!-- AI & Experience -->
-                    <div>
-                        <h3 class="text-20 md:text-24 font-bold text-charcoal-900 mb-6 border-b border-gray-200 pb-2">AI
+                    <!-- Category: AI
                             &
-                            Experience</h3>
-                        <div class="space-y-4">
-                            <div
-                                class="bg-white rounded-lg shadow-sm border border-gray-100 overflow-hidden accordion-group">
-                                <button
-                                    class="w-full px-6 py-5 text-left flex justify-between items-center focus:outline-none accordion-trigger">
-                                    <span class="font-semibold text-charcoal-800 pr-4 text-16 md:text-18">How does the
-                                        AI generate
-                                        interior designs?</span>
-                                    <svg class="icon w-5 h-5 text-brass-gold-500 transform transition-transform duration-300 flex-shrink-0"
-                                        fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            Experience -->
+                    <div>
+                        <div class="pb-4">
+                            <h3 class="text-20 md:text-24 font-bold text-ink-navy-900">AI
+                                &
+                                Experience</h3>
+                        </div>
+                        <div class="accordion-group border-b border-gray-200">
+                            <button
+                                class="accordion-trigger w-full py-6 flex justify-between items-center text-left focus:outline-none cursor-pointer">
+                                <span class="text-16 md:text-18 font-medium text-charcoal-900">How does the
+                                    AI generate
+                                    interior designs?</span>
+                                <span
+                                    class="icon text-brass-gold-500 shrink-0 ml-4 transform transition-transform duration-300">
+                                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                            d="M19 9l-7 7-7-7"></path>
+                                            d="M12 6v12M6 12h12"></path>
                                     </svg>
-                                </button>
-                                <div class="accordion-content max-h-0 overflow-hidden transition-all duration-300">
-                                    <div class="px-6 pb-5 text-charcoal-600 text-14 md:text-16">
-                                        Sightro uses advanced AI models trained on interior design and real-estate
-                                        imagery to generate realistic room transformations based on user input and style
-                                        selection.
-                                    </div>
-                                </div>
+                                </span>
+                            </button>
+                            <div class="accordion-content max-h-0 overflow-hidden transition-all duration-300">
+                                <p class="pb-6 text-15 md:text-16 text-charcoal-600 leading-relaxed pr-8">
+                                    Sightro uses advanced AI models trained on interior design and real-estate
+                                    imagery to generate realistic room transformations based on user input and style
+                                    selection.
+                                </p>
                             </div>
-                            <div
-                                class="bg-white rounded-lg shadow-sm border border-gray-100 overflow-hidden accordion-group">
-                                <button
-                                    class="w-full px-6 py-5 text-left flex justify-between items-center focus:outline-none accordion-trigger">
-                                    <span class="font-semibold text-charcoal-800 pr-4 text-16 md:text-18">Can I control
-                                        the design
-                                        styles shown to visitors?</span>
-                                    <svg class="icon w-5 h-5 text-brass-gold-500 transform transition-transform duration-300 flex-shrink-0"
-                                        fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        </div>
+                        <div class="accordion-group border-b border-gray-200">
+                            <button
+                                class="accordion-trigger w-full py-6 flex justify-between items-center text-left focus:outline-none cursor-pointer">
+                                <span class="text-16 md:text-18 font-medium text-charcoal-900">Can I control
+                                    the design
+                                    styles shown to visitors?</span>
+                                <span
+                                    class="icon text-brass-gold-500 shrink-0 ml-4 transform transition-transform duration-300">
+                                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                            d="M19 9l-7 7-7-7"></path>
+                                            d="M12 6v12M6 12h12"></path>
                                     </svg>
-                                </button>
-                                <div class="accordion-content max-h-0 overflow-hidden transition-all duration-300">
-                                    <div class="px-6 pb-5 text-charcoal-600 text-14 md:text-16">
-                                        Yes. You can enable or disable specific styles, rooms, and prompts to match your
-                                        project branding and buyer profile.
-                                    </div>
-                                </div>
+                                </span>
+                            </button>
+                            <div class="accordion-content max-h-0 overflow-hidden transition-all duration-300">
+                                <p class="pb-6 text-15 md:text-16 text-charcoal-600 leading-relaxed pr-8">
+                                    Yes. You can enable or disable specific styles, rooms, and prompts to match your
+                                    project branding and buyer profile.
+                                </p>
                             </div>
-                            <div
-                                class="bg-white rounded-lg shadow-sm border border-gray-100 overflow-hidden accordion-group">
-                                <button
-                                    class="w-full px-6 py-5 text-left flex justify-between items-center focus:outline-none accordion-trigger">
-                                    <span class="font-semibold text-charcoal-800 pr-4 text-16 md:text-18">Will the AI
-                                        change the
-                                        actual layout of the room?</span>
-                                    <svg class="icon w-5 h-5 text-brass-gold-500 transform transition-transform duration-300 flex-shrink-0"
-                                        fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        </div>
+                        <div class="accordion-group border-b border-gray-200">
+                            <button
+                                class="accordion-trigger w-full py-6 flex justify-between items-center text-left focus:outline-none cursor-pointer">
+                                <span class="text-16 md:text-18 font-medium text-charcoal-900">Will the AI
+                                    change the
+                                    actual layout of the room?</span>
+                                <span
+                                    class="icon text-brass-gold-500 shrink-0 ml-4 transform transition-transform duration-300">
+                                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                            d="M19 9l-7 7-7-7"></path>
+                                            d="M12 6v12M6 12h12"></path>
                                     </svg>
-                                </button>
-                                <div class="accordion-content max-h-0 overflow-hidden transition-all duration-300">
-                                    <div class="px-6 pb-5 text-charcoal-600 text-14 md:text-16">
-                                        No. Sightro preserves the room’s structure while enhancing it visually, helping
-                                        buyers imagine the space without misrepresenting the property.
-                                    </div>
-                                </div>
+                                </span>
+                            </button>
+                            <div class="accordion-content max-h-0 overflow-hidden transition-all duration-300">
+                                <p class="pb-6 text-15 md:text-16 text-charcoal-600 leading-relaxed pr-8">
+                                    No. Sightro preserves the room’s structure while enhancing it visually, helping
+                                    buyers imagine the space without misrepresenting the property.
+                                </p>
                             </div>
                         </div>
                     </div>
-
-                    <!-- Leads & Sales -->
+                    <!-- Category: Leads & Sales -->
                     <div>
-                        <h3 class="text-20 md:text-24 font-bold text-charcoal-900 mb-6 border-b border-gray-200 pb-2">
-                            Leads & Sales
-                        </h3>
-                        <div class="space-y-4">
-                            <div
-                                class="bg-white rounded-lg shadow-sm border border-gray-100 overflow-hidden accordion-group">
-                                <button
-                                    class="w-full px-6 py-5 text-left flex justify-between items-center focus:outline-none accordion-trigger">
-                                    <span class="font-semibold text-charcoal-800 pr-4 text-16 md:text-18">What
-                                        information do I
-                                        receive with each lead?</span>
-                                    <svg class="icon w-5 h-5 text-brass-gold-500 transform transition-transform duration-300 flex-shrink-0"
-                                        fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <div class="pb-4">
+                            <h3 class="text-20 md:text-24 font-bold text-ink-navy-900">Leads & Sales</h3>
+                        </div>
+                        <div class="accordion-group border-b border-gray-200">
+                            <button
+                                class="accordion-trigger w-full py-6 flex justify-between items-center text-left focus:outline-none cursor-pointer">
+                                <span class="text-16 md:text-18 font-medium text-charcoal-900">What
+                                    information do I
+                                    receive with each lead?</span>
+                                <span
+                                    class="icon text-brass-gold-500 shrink-0 ml-4 transform transition-transform duration-300">
+                                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                            d="M19 9l-7 7-7-7"></path>
+                                            d="M12 6v12M6 12h12"></path>
                                     </svg>
-                                </button>
-                                <div class="accordion-content max-h-0 overflow-hidden transition-all duration-300">
-                                    <div class="px-6 pb-5 text-charcoal-600 text-14 md:text-16">
-                                        In addition to contact details, Sightro captures engagement insights such as
-                                        rooms explored, styles selected, number of interactions, and saved designs. This
-                                        helps sales teams tailor conversations from the first call.
-                                    </div>
-                                </div>
+                                </span>
+                            </button>
+                            <div class="accordion-content max-h-0 overflow-hidden transition-all duration-300">
+                                <p class="pb-6 text-15 md:text-16 text-charcoal-600 leading-relaxed pr-8">
+                                    In addition to contact details, Sightro captures engagement insights such as
+                                    rooms explored, styles selected, number of interactions, and saved designs. This
+                                    helps sales teams tailor conversations from the first call.
+                                </p>
                             </div>
-                            <div
-                                class="bg-white rounded-lg shadow-sm border border-gray-100 overflow-hidden accordion-group">
-                                <button
-                                    class="w-full px-6 py-5 text-left flex justify-between items-center focus:outline-none accordion-trigger">
-                                    <span class="font-semibold text-charcoal-800 pr-4 text-16 md:text-18">Where can I
-                                        view my
-                                        leads?</span>
-                                    <svg class="icon w-5 h-5 text-brass-gold-500 transform transition-transform duration-300 flex-shrink-0"
-                                        fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        </div>
+                        <div class="accordion-group border-b border-gray-200">
+                            <button
+                                class="accordion-trigger w-full py-6 flex justify-between items-center text-left focus:outline-none cursor-pointer">
+                                <span class="text-16 md:text-18 font-medium text-charcoal-900">Where can I
+                                    view my
+                                    leads?</span>
+                                <span
+                                    class="icon text-brass-gold-500 shrink-0 ml-4 transform transition-transform duration-300">
+                                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                            d="M19 9l-7 7-7-7"></path>
+                                            d="M12 6v12M6 12h12"></path>
                                     </svg>
-                                </button>
-                                <div class="accordion-content max-h-0 overflow-hidden transition-all duration-300">
-                                    <div class="px-6 pb-5 text-charcoal-600 text-14 md:text-16">
-                                        All leads are available in your Sightro dashboard. You can also export leads or
-                                        connect Sightro to supported CRMs on higher plans.
-                                    </div>
-                                </div>
+                                </span>
+                            </button>
+                            <div class="accordion-content max-h-0 overflow-hidden transition-all duration-300">
+                                <p class="pb-6 text-15 md:text-16 text-charcoal-600 leading-relaxed pr-8">
+                                    All leads are available in your Sightro dashboard. You can also export leads or
+                                    connect Sightro to supported CRMs on higher plans.
+                                </p>
                             </div>
-                            <div
-                                class="bg-white rounded-lg shadow-sm border border-gray-100 overflow-hidden accordion-group">
-                                <button
-                                    class="w-full px-6 py-5 text-left flex justify-between items-center focus:outline-none accordion-trigger">
-                                    <span class="font-semibold text-charcoal-800 pr-4 text-16 md:text-18">Does Sightro
-                                        integrate
-                                        with CRMs?</span>
-                                    <svg class="icon w-5 h-5 text-brass-gold-500 transform transition-transform duration-300 flex-shrink-0"
-                                        fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        </div>
+                        <div class="accordion-group border-b border-gray-200">
+                            <button
+                                class="accordion-trigger w-full py-6 flex justify-between items-center text-left focus:outline-none cursor-pointer">
+                                <span class="text-16 md:text-18 font-medium text-charcoal-900">Does Sightro
+                                    integrate
+                                    with CRMs?</span>
+                                <span
+                                    class="icon text-brass-gold-500 shrink-0 ml-4 transform transition-transform duration-300">
+                                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                            d="M19 9l-7 7-7-7"></path>
+                                            d="M12 6v12M6 12h12"></path>
                                     </svg>
-                                </button>
-                                <div class="accordion-content max-h-0 overflow-hidden transition-all duration-300">
-                                    <div class="px-6 pb-5 text-charcoal-600 text-14 md:text-16">
-                                        Yes. CRM integrations are available on Growth and Enterprise plans. Custom
-                                        integrations are also supported.
-                                    </div>
-                                </div>
+                                </span>
+                            </button>
+                            <div class="accordion-content max-h-0 overflow-hidden transition-all duration-300">
+                                <p class="pb-6 text-15 md:text-16 text-charcoal-600 leading-relaxed pr-8">
+                                    Yes. CRM integrations are available on Growth and Enterprise plans. Custom
+                                    integrations are also supported.
+                                </p>
                             </div>
                         </div>
                     </div>
-
-                    <!-- Pricing & Billing -->
+                    <!-- Category: Pricing &
+                            Billing -->
                     <div>
-                        <h3 class="text-20 md:text-24 font-bold text-charcoal-900 mb-6 border-b border-gray-200 pb-2">
-                            Pricing &
-                            Billing</h3>
-                        <div class="space-y-4">
-                            <div
-                                class="bg-white rounded-lg shadow-sm border border-gray-100 overflow-hidden accordion-group">
-                                <button
-                                    class="w-full px-6 py-5 text-left flex justify-between items-center focus:outline-none accordion-trigger">
-                                    <span class="font-semibold text-charcoal-800 pr-4 text-16 md:text-18">How is pricing
-                                        calculated?</span>
-                                    <svg class="icon w-5 h-5 text-brass-gold-500 transform transition-transform duration-300 flex-shrink-0"
-                                        fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <div class="pb-4">
+                            <h3 class="text-20 md:text-24 font-bold text-ink-navy-900">Pricing &
+                                Billing</h3>
+                        </div>
+                        <div class="accordion-group border-b border-gray-200">
+                            <button
+                                class="accordion-trigger w-full py-6 flex justify-between items-center text-left focus:outline-none cursor-pointer">
+                                <span class="text-16 md:text-18 font-medium text-charcoal-900">How is pricing
+                                    calculated?</span>
+                                <span
+                                    class="icon text-brass-gold-500 shrink-0 ml-4 transform transition-transform duration-300">
+                                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                            d="M19 9l-7 7-7-7"></path>
+                                            d="M12 6v12M6 12h12"></path>
                                     </svg>
-                                </button>
-                                <div class="accordion-content max-h-0 overflow-hidden transition-all duration-300">
-                                    <div class="px-6 pb-5 text-charcoal-600 text-14 md:text-16">
-                                        Pricing is based on monthly AI usage and feature access. You can choose a plan
-                                        that fits your project size and scale up as needed.
-                                    </div>
-                                </div>
+                                </span>
+                            </button>
+                            <div class="accordion-content max-h-0 overflow-hidden transition-all duration-300">
+                                <p class="pb-6 text-15 md:text-16 text-charcoal-600 leading-relaxed pr-8">
+                                    Pricing is based on monthly AI usage and feature access. You can choose a plan
+                                    that fits your project size and scale up as needed.
+                                </p>
                             </div>
-                            <div
-                                class="bg-white rounded-lg shadow-sm border border-gray-100 overflow-hidden accordion-group">
-                                <button
-                                    class="w-full px-6 py-5 text-left flex justify-between items-center focus:outline-none accordion-trigger">
-                                    <span class="font-semibold text-charcoal-800 pr-4 text-16 md:text-18">Can I upgrade
-                                        or
-                                        downgrade my plan?</span>
-                                    <svg class="icon w-5 h-5 text-brass-gold-500 transform transition-transform duration-300 flex-shrink-0"
-                                        fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        </div>
+                        <div class="accordion-group border-b border-gray-200">
+                            <button
+                                class="accordion-trigger w-full py-6 flex justify-between items-center text-left focus:outline-none cursor-pointer">
+                                <span class="text-16 md:text-18 font-medium text-charcoal-900">Can I upgrade
+                                    or
+                                    downgrade my plan?</span>
+                                <span
+                                    class="icon text-brass-gold-500 shrink-0 ml-4 transform transition-transform duration-300">
+                                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                            d="M19 9l-7 7-7-7"></path>
+                                            d="M12 6v12M6 12h12"></path>
                                     </svg>
-                                </button>
-                                <div class="accordion-content max-h-0 overflow-hidden transition-all duration-300">
-                                    <div class="px-6 pb-5 text-charcoal-600 text-14 md:text-16">
-                                        Yes. Plans can be changed at any time from your dashboard.
-                                    </div>
-                                </div>
+                                </span>
+                            </button>
+                            <div class="accordion-content max-h-0 overflow-hidden transition-all duration-300">
+                                <p class="pb-6 text-15 md:text-16 text-charcoal-600 leading-relaxed pr-8">
+                                    Yes. Plans can be changed at any time from your dashboard.
+                                </p>
                             </div>
-                            <div
-                                class="bg-white rounded-lg shadow-sm border border-gray-100 overflow-hidden accordion-group">
-                                <button
-                                    class="w-full px-6 py-5 text-left flex justify-between items-center focus:outline-none accordion-trigger">
-                                    <span class="font-semibold text-charcoal-800 pr-4 text-16 md:text-18">Is there a
-                                        free
-                                        trial?</span>
-                                    <svg class="icon w-5 h-5 text-brass-gold-500 transform transition-transform duration-300 flex-shrink-0"
-                                        fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        </div>
+                        <div class="accordion-group border-b border-gray-200">
+                            <button
+                                class="accordion-trigger w-full py-6 flex justify-between items-center text-left focus:outline-none cursor-pointer">
+                                <span class="text-16 md:text-18 font-medium text-charcoal-900">Is there a
+                                    free
+                                    trial?</span>
+                                <span
+                                    class="icon text-brass-gold-500 shrink-0 ml-4 transform transition-transform duration-300">
+                                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                            d="M19 9l-7 7-7-7"></path>
+                                            d="M12 6v12M6 12h12"></path>
                                     </svg>
-                                </button>
-                                <div class="accordion-content max-h-0 overflow-hidden transition-all duration-300">
-                                    <div class="px-6 pb-5 text-charcoal-600 text-14 md:text-16">
-                                        Yes. Sightro offers a trial so you can experience the product before
-                                        committing.
-                                    </div>
-                                </div>
+                                </span>
+                            </button>
+                            <div class="accordion-content max-h-0 overflow-hidden transition-all duration-300">
+                                <p class="pb-6 text-15 md:text-16 text-charcoal-600 leading-relaxed pr-8">
+                                    Yes. Sightro offers a trial so you can experience the product before
+                                    committing.
+                                </p>
                             </div>
                         </div>
                     </div>
-
-                    <!-- Account & Management -->
+                    <!-- Category: Account &
+                            Management -->
                     <div>
-                        <h3 class="text-20 md:text-24 font-bold text-charcoal-900 mb-6 border-b border-gray-200 pb-2">
-                            Account &
-                            Management</h3>
-                        <div class="space-y-4">
-                            <div
-                                class="bg-white rounded-lg shadow-sm border border-gray-100 overflow-hidden accordion-group">
-                                <button
-                                    class="w-full px-6 py-5 text-left flex justify-between items-center focus:outline-none accordion-trigger">
-                                    <span class="font-semibold text-charcoal-800 pr-4 text-16 md:text-18">Can I pause or
-                                        deactivate
-                                        Sightro on a property?</span>
-                                    <svg class="icon w-5 h-5 text-brass-gold-500 transform transition-transform duration-300 flex-shrink-0"
-                                        fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <div class="pb-4">
+                            <h3 class="text-20 md:text-24 font-bold text-ink-navy-900">Account &
+                                Management</h3>
+                        </div>
+                        <div class="accordion-group border-b border-gray-200">
+                            <button
+                                class="accordion-trigger w-full py-6 flex justify-between items-center text-left focus:outline-none cursor-pointer">
+                                <span class="text-16 md:text-18 font-medium text-charcoal-900">Can I pause or
+                                    deactivate
+                                    Sightro on a property?</span>
+                                <span
+                                    class="icon text-brass-gold-500 shrink-0 ml-4 transform transition-transform duration-300">
+                                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                            d="M19 9l-7 7-7-7"></path>
+                                            d="M12 6v12M6 12h12"></path>
                                     </svg>
-                                </button>
-                                <div class="accordion-content max-h-0 overflow-hidden transition-all duration-300">
-                                    <div class="px-6 pb-5 text-charcoal-600 text-14 md:text-16">
-                                        Yes. You can activate or deactivate PropDeck on individual properties at any
-                                        time.
-                                    </div>
-                                </div>
+                                </span>
+                            </button>
+                            <div class="accordion-content max-h-0 overflow-hidden transition-all duration-300">
+                                <p class="pb-6 text-15 md:text-16 text-charcoal-600 leading-relaxed pr-8">
+                                    Yes. You can activate or deactivate PropDeck on individual properties at any
+                                    time.
+                                </p>
                             </div>
-                            <div
-                                class="bg-white rounded-lg shadow-sm border border-gray-100 overflow-hidden accordion-group">
-                                <button
-                                    class="w-full px-6 py-5 text-left flex justify-between items-center focus:outline-none accordion-trigger">
-                                    <span class="font-semibold text-charcoal-800 pr-4 text-16 md:text-18">Is Sightro
-                                        mobile-friendly?</span>
-                                    <svg class="icon w-5 h-5 text-brass-gold-500 transform transition-transform duration-300 flex-shrink-0"
-                                        fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        </div>
+                        <div class="accordion-group border-b border-gray-200">
+                            <button
+                                class="accordion-trigger w-full py-6 flex justify-between items-center text-left focus:outline-none cursor-pointer">
+                                <span class="text-16 md:text-18 font-medium text-charcoal-900">Is Sightro
+                                    mobile-friendly?</span>
+                                <span
+                                    class="icon text-brass-gold-500 shrink-0 ml-4 transform transition-transform duration-300">
+                                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                            d="M19 9l-7 7-7-7"></path>
+                                            d="M12 6v12M6 12h12"></path>
                                     </svg>
-                                </button>
-                                <div class="accordion-content max-h-0 overflow-hidden transition-all duration-300">
-                                    <div class="px-6 pb-5 text-charcoal-600 text-14 md:text-16">
-                                        Absolutely. PropDeck is optimized for desktop, tablet, and mobile experiences.
-                                    </div>
-                                </div>
+                                </span>
+                            </button>
+                            <div class="accordion-content max-h-0 overflow-hidden transition-all duration-300">
+                                <p class="pb-6 text-15 md:text-16 text-charcoal-600 leading-relaxed pr-8">
+                                    Absolutely. PropDeck is optimized for desktop, tablet, and mobile experiences.
+                                </p>
                             </div>
                         </div>
                     </div>
-
-                    <!-- Security & Reliability -->
+                    <!-- Category: Security &
+                            Reliability -->
                     <div>
-                        <h3 class="text-20 md:text-24 font-bold text-charcoal-900 mb-6 border-b border-gray-200 pb-2">
-                            Security &
-                            Reliability</h3>
-                        <div class="space-y-4">
-                            <div
-                                class="bg-white rounded-lg shadow-sm border border-gray-100 overflow-hidden accordion-group">
-                                <button
-                                    class="w-full px-6 py-5 text-left flex justify-between items-center focus:outline-none accordion-trigger">
-                                    <span class="font-semibold text-charcoal-800 pr-4 text-16 md:text-18">Is my data
-                                        secure?</span>
-                                    <svg class="icon w-5 h-5 text-brass-gold-500 transform transition-transform duration-300 flex-shrink-0"
-                                        fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <div class="pb-4">
+                            <h3 class="text-20 md:text-24 font-bold text-ink-navy-900">Security &
+                                Reliability</h3>
+                        </div>
+                        <div class="accordion-group border-b border-gray-200">
+                            <button
+                                class="accordion-trigger w-full py-6 flex justify-between items-center text-left focus:outline-none cursor-pointer">
+                                <span class="text-16 md:text-18 font-medium text-charcoal-900">Is my data
+                                    secure?</span>
+                                <span
+                                    class="icon text-brass-gold-500 shrink-0 ml-4 transform transition-transform duration-300">
+                                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                            d="M19 9l-7 7-7-7"></path>
+                                            d="M12 6v12M6 12h12"></path>
                                     </svg>
-                                </button>
-                                <div class="accordion-content max-h-0 overflow-hidden transition-all duration-300">
-                                    <div class="px-6 pb-5 text-charcoal-600 text-14 md:text-16">
-                                        Yes. Sightro follows modern security best practices to ensure your data and
-                                        your buyers’ information are protected.
-                                    </div>
-                                </div>
+                                </span>
+                            </button>
+                            <div class="accordion-content max-h-0 overflow-hidden transition-all duration-300">
+                                <p class="pb-6 text-15 md:text-16 text-charcoal-600 leading-relaxed pr-8">
+                                    Yes. Sightro follows modern security best practices to ensure your data and
+                                    your buyers’ information are protected.
+                                </p>
                             </div>
-                            <div
-                                class="bg-white rounded-lg shadow-sm border border-gray-100 overflow-hidden accordion-group">
-                                <button
-                                    class="w-full px-6 py-5 text-left flex justify-between items-center focus:outline-none accordion-trigger">
-                                    <span class="font-semibold text-charcoal-800 pr-4 text-16 md:text-18">Does Sightro
-                                        affect
-                                        website performance?</span>
-                                    <svg class="icon w-5 h-5 text-brass-gold-500 transform transition-transform duration-300 flex-shrink-0"
-                                        fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        </div>
+                        <div class="accordion-group border-b border-gray-200">
+                            <button
+                                class="accordion-trigger w-full py-6 flex justify-between items-center text-left focus:outline-none cursor-pointer">
+                                <span class="text-16 md:text-18 font-medium text-charcoal-900">Does Sightro
+                                    affect
+                                    website performance?</span>
+                                <span
+                                    class="icon text-brass-gold-500 shrink-0 ml-4 transform transition-transform duration-300">
+                                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                            d="M19 9l-7 7-7-7"></path>
+                                            d="M12 6v12M6 12h12"></path>
                                     </svg>
-                                </button>
-                                <div class="accordion-content max-h-0 overflow-hidden transition-all duration-300">
-                                    <div class="px-6 pb-5 text-charcoal-600 text-14 md:text-16">
-                                        No. The widget is lightweight and loads asynchronously to ensure minimal impact
-                                        on page speed.
-                                    </div>
-                                </div>
+                                </span>
+                            </button>
+                            <div class="accordion-content max-h-0 overflow-hidden transition-all duration-300">
+                                <p class="pb-6 text-15 md:text-16 text-charcoal-600 leading-relaxed pr-8">
+                                    No. The widget is lightweight and loads asynchronously to ensure minimal impact
+                                    on page speed.
+                                </p>
                             </div>
                         </div>
                     </div>
@@ -808,9 +827,9 @@
         </section>
 
         <!-- 4. CTA Section -->
-        <section class="bg-warm-sand-100 py-16 md:py-24 lg:py-32 px-6 md:px-8 text-left">
+        <!-- <section class="bg-warm-sand-100 py-16 md:py-24 lg:py-32 px-6 md:px-8 text-left">
             <div class="max-w-7xl mx-auto">
-                <!-- <div class="text-brass-gold-500 text-12 font-bold uppercase tracking-wide mb-6">READY TO SEE IT?</div> -->
+
                 <h2 class="text-32 md:text-40 lg:text-48 font-semibold text-charcoal-800 mb-6 leading-tight">
                     Ready to see it on your own site?
                 </h2>
@@ -825,6 +844,76 @@
                     <a href="contact.html"
                         class="bg-ink-navy-900 hover:bg-ink-navy-800 text-white px-8 py-4 rounded-full font-normal transition-all duration-300 hover:-translate-y-1 shadow-lg">Talk
                         to sales</a>
+                </div>
+            </div>
+        </section> -->
+        <!-- 4. CTA Banner Section -->
+        <section class="bg-[#FCFAF8] py-16 md:py-24 px-6 md:px-8">
+            <div class="max-w-7xl mx-auto">
+                <div
+                    class="relative bg-ink-navy-900 rounded-2xl md:rounded-3xl overflow-hidden flex flex-col md:flex-row shadow-2xl min-h-[400px]">
+
+                    <!-- Left Side: Image with gradient and text overlay -->
+                    <div class="w-full md:w-5/12 lg:w-5/12 relative min-h-[300px] md:min-h-full">
+                        <!-- Image with CSS mask for smooth fade into navy -->
+                        <div class="absolute inset-0 bg-cover bg-center"
+                            style="background-image: url('assets/developer-cta.jpg'); -webkit-mask-image: linear-gradient(to right, black 50%, transparent 100%); mask-image: linear-gradient(to right, black 50%, transparent 100%);">
+                        </div>
+                        <!-- Additional gradient overlay for text readability -->
+                        <div
+                            class="absolute inset-0 bg-gradient-to-t from-ink-navy-900/90 via-ink-navy-900/20 to-transparent">
+                        </div>
+
+                        <!-- Brand Text -->
+                        <!-- <div class="absolute bottom-8 lg:bottom-12 left-8 lg:left-12 z-10">
+                            <p
+                                class="text-white text-11 md:text-12 font-semibold tracking-[0.15em] leading-loose uppercase text-white/90">
+                                More insights.<br>
+                                More buyers.<br>
+                                A brighter tomorrow.
+                            </p>
+                        </div> -->
+                    </div>
+
+                    <!-- Right Side: Content -->
+                    <div
+                        class="w-full md:w-7/12 lg:w-7/12 p-10 md:p-12 lg:p-16 flex flex-col justify-center relative z-10">
+
+                        <!-- Background Line Art (Building outline) on the far right -->
+                        <div class="absolute right-0 top-0 h-full w-1/2 opacity-20 pointer-events-none overflow-hidden">
+                            <svg class="absolute right-0 top-1/2 transform -translate-y-1/2 h-[120%] w-auto text-brass-gold-500"
+                                fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 200 200"
+                                preserveAspectRatio="xMaxYMax meet">
+                                <!-- Tall building right -->
+                                <path d="M180 200 V20 L130 60 V200" />
+                                <!-- Medium building -->
+                                <path d="M150 200 V80 L90 120 V200" />
+                                <!-- Smaller building left -->
+                                <path d="M110 200 V140 L70 170 V200" />
+                                <!-- Cross lines for perspective/facade -->
+                                <path d="M130 60 L180 100 M130 100 L180 140 M130 140 L180 180" opacity="0.3" />
+                                <path d="M90 120 L150 160 M90 160 L150 190" opacity="0.3" />
+                            </svg>
+                        </div>
+
+                        <div class="max-w-lg relative z-10">
+                            <h2 class="text-28 md:text-36 lg:text-40 font-medium text-white mb-4 leading-tight">
+                                Ready to see it on your own site?
+                            </h2>
+                            <p class="text-16 md:text-18 text-white/80 mb-8 leading-relaxed">
+                                Talk to our team and see how Sightro can work for your next project.
+                            </p>
+                            <div class="flex flex-col sm:flex-row gap-4 items-center">
+                                <a href="contact.html"
+                                    class="bg-brass-gold-500 hover:bg-brass-gold-600 text-ink-navy-900 px-8 py-4 rounded-full font-semibold transition-all duration-300 hover:-translate-y-1 shadow-lg">Book
+                                    a demo </a>
+                                <a href="contact.html"
+                                    class="inline-flex justify-center items-center px-8 py-4 bg-transparent border border-gray-400 hover:border-white hover:-translate-y-1 text-white font-medium rounded-full transition-all duration-300 shadow-lg text-16 md:text-18">Talk
+                                    to sales</a>
+                            </div>
+                        </div>
+                    </div>
+
                 </div>
             </div>
         </section>
