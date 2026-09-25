@@ -164,7 +164,7 @@
     <main>
         <!-- 1. Hero Section -->
         <section class="text-white pt-24 md:pt-32 pb-24 md:pb-40 px-6 md:px-8 relative overflow-hidden"
-            style="background: linear-gradient(95deg, rgba(10, 25, 47, 0.80) 0%, rgba(10, 25, 47, 0.80) 25%,  rgba(10, 25, 47, 0.80) 50%, rgba(10, 25, 47, 0.80) 100%), url('./assets/public-kiosk-hero.png')  center/cover no-repeat;">
+            style="background: linear-gradient(95deg, rgba(10, 25, 47, 0.80) 0%, rgba(10, 25, 47, 0.80) 25%,  rgba(10, 25, 47, 0.50) 50%, rgba(10, 25, 47, 0.0) 100%), url('./assets/public-kiosk-hero.png')  center/cover no-repeat;">
             <div class="max-w-7xl mx-auto relative z-10">
                 <div class="max-w-3xl">
                     <div
@@ -208,21 +208,25 @@
                 class="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-8 text-center divide-y md:divide-y-0 md:divide-x divide-gray-200">
                 <div class="py-4">
                     <div class="text-40 md:text-48 lg:text-56 font-semibold text-ink-navy-900 mb-2">4X</div>
-                    <div class="text-16 font-medium text-charcoal-500  tracking-wide">More meaningful conversations per
+                    <div class="text-16 font-medium text-charcoal-500  tracking-wide">More meaningful
+                        conversations
+                        per
                         event
 
                     </div>
                 </div>
                 <div class="py-4">
                     <div class="text-40 md:text-48 lg:text-56 font-semibold text-ink-navy-900 mb-2">3X</div>
-                    <div class="text-16 font-medium text-charcoal-500  tracking-wide">Longer engagement than a static
+                    <div class="text-16 font-medium text-charcoal-500  tracking-wide px-12">Longer engagement than a
+                        static
                         display
 
                     </div>
                 </div>
                 <div class="py-4">
                     <div class="text-40 md:text-48 lg:text-56 font-semibold text-ink-navy-900 mb-2">65%</div>
-                    <div class="text-16 font-medium text-charcoal-500 tracking-wide">Of visitors continue the journey on
+                    <div class="text-16 font-medium text-charcoal-500 tracking-wide px-8">Of visitors continue the
+                        journey on
                         their phone
 
                     </div>
@@ -344,7 +348,7 @@
                     <div
                         class="bg-white rounded-2xl overflow-hidden border border-warm-sand-500 shadow-sm flex flex-col group hover:shadow-md transition-shadow duration-300">
                         <div class="w-full overflow-hidden" style="aspect-ratio: 16/9;">
-                            <img src="./assets/kiosk-at-street.png" alt="Sightro kiosk in a Dubai Marina show apartment"
+                            <img src="./assets/kiosk-in-room.png" alt="Sightro kiosk in a Dubai Marina show apartment"
                                 class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
                         </div>
                         <div class="p-8 flex-1">
@@ -363,7 +367,7 @@
                     <div
                         class="bg-white rounded-2xl overflow-hidden border border-warm-sand-500 shadow-sm flex flex-col group hover:shadow-md transition-shadow duration-300">
                         <div class="w-full overflow-hidden" style="aspect-ratio: 16/9;">
-                            <img src="./assets/kiosk-at-shopping-mall.png"
+                            <img src="./assets/kiosk-at-tradeshow.png"
                                 alt="Branded Sightro kiosk at a real estate expo booth"
                                 class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
                         </div>
@@ -382,11 +386,16 @@
                     <!-- Card 3 -->
                     <div
                         class="bg-white rounded-2xl overflow-hidden border border-warm-sand-500 shadow-sm flex flex-col hover:shadow-md transition-shadow duration-300">
-                        <div class="w-full bg-ink-navy-900 flex items-center justify-center p-6 text-center"
+                        <!-- <div class="w-full bg-ink-navy-900 flex items-center justify-center p-6 text-center"
                             style="aspect-ratio: 16/9;">
                             <span
                                 class="text-brass-gold-500 font-semibold tracking-wider uppercase text-14 md:text-16">LUXURY
                                 RETAIL & MIXED-USE</span>
+                        </div> -->
+                        <div class="w-full overflow-hidden" style="aspect-ratio: 16/9;">
+                            <img src="./assets/kiosk-at-shopping-mall.png"
+                                alt="Branded Sightro kiosk at a real estate expo booth"
+                                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
                         </div>
                         <div class="p-8 flex-1">
                             <div
@@ -402,12 +411,17 @@
                     <!-- Card 4 -->
                     <div
                         class="bg-white rounded-2xl overflow-hidden border border-warm-sand-500 shadow-sm flex flex-col hover:shadow-md transition-shadow duration-300">
-                        <div class="w-full bg-ink-navy-900 flex items-center justify-center p-6 text-center"
+                        <div class="w-full overflow-hidden" style="aspect-ratio: 16/9;">
+                            <img src="./assets/kiosk-at-airport.png"
+                                alt="Branded Sightro kiosk at a real estate expo booth"
+                                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+                        </div>
+                        <!-- <div class="w-full bg-ink-navy-900 flex items-center justify-center p-6 text-center"
                             style="aspect-ratio: 16/9;">
                             <span
                                 class="text-brass-gold-500 font-semibold tracking-wider uppercase text-14 md:text-16">AIRPORTS
                                 & PRIVATE LOUNGES</span>
-                        </div>
+                        </div> -->
                         <div class="p-8 flex-1">
                             <div
                                 class="text-brass-gold-500 text-11 md:text-12 font-semibold uppercase tracking-wider mb-3">
@@ -554,6 +568,11 @@
 
                 </div>
             </div>
+        </section>
+
+        <!-- kiosk image -->
+        <section class="max-w-7xl mx-auto px-6 mb-12">
+            <img src="./assets/public-kiosk-full.png" alt="kiosk image" class="w-full h-auto object-cover">
         </section>
 
         <!-- The Payoff -->
