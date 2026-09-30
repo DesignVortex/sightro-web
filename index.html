@@ -209,7 +209,15 @@
 
     <!-- Main UI Mockup -->
     <div class="max-w-7xl mx-auto px-4 mt-12">
+        <div>
+            <div class="text-brass-gold-500 text-12 font-bold uppercase tracking-wide mb-4">INTERACTIVE PROPERTY
+                EXPERIENCE
+            </div>
+            <h2 class="text-32 md:text-40 lg:text-48 font-semibold  text-charcoal-800 mb-6 leading-tight">
+                Experience Sightro
+            </h2>
 
+        </div>
 
         <div id="plugin" style="width: 100%; display: flex; justify-content: center;">
             <iframe id="propdeck-iframe" src="https://interior-frontend-propdeck.vercel.app/"
@@ -332,7 +340,7 @@
                     <!-- Tab Content 1 -->
                     <div id="content-dreamroom"
                         class="feature-content absolute inset-0 transition-all duration-500 opacity-100 translate-y-0">
-                        <video src="./assets/dream-room-working.mp4" autoplay loop muted playsinline
+                        <video src="./assets/dream-room-new.mp4" autoplay loop muted playsinline
                             class="w-full h-full object-contain"></video>
                         <!-- <p class="text-charcoal-800 text-18 md:text-20 font-medium leading-relaxed max-w-lg">Let buyers
                             reimagine rooms with AI and explore how the property could fit their lifestyle.</p> -->
@@ -542,8 +550,52 @@
     </section>
 
     <!-- Bottom CTA -->
-    <section class="bg-ink-navy-900 py-16 md:py-20 lg:py-24 px-6 md:px-8 text-white">
+    <section class="relative py-24 md:py-32 px-6 md:px-8 overflow-hidden bg-ink-navy-900">
+        <!-- Background Image -->
+        <div class="absolute inset-0 z-0">
+            <img src="assets/homepage-cta-background.png" alt="Dubai skyline" class="w-full h-full object-cover">
+            <!-- Gradient Overlay -->
+            <div class="absolute inset-0 bg-gradient-to-r from-ink-navy-900/95 via-ink-navy-900/80 to-ink-navy-900/30">
+            </div>
+        </div>
+
+        <!-- Content -->
+        <div
+            class="relative z-10 max-w-7xl mx-auto flex flex-col lg:flex-row items-start justify-between gap-16 lg:gap-8">
+            <!-- Left Content -->
+            <div class="max-w-4xl w-full">
+                <div class="text-brass-gold-500 text-12 font-bold uppercase tracking-wide mb-4">
+                    TURN YOUR WEBSITE INTO A SALES INTELLIGENCE CHANNEL
+
+                </div>
+                <h2 class="text-32 md:text-40 lg:text-48 font-medium text-white mb-6 leading-tight">
+                    More for buyers to explore.</br> Give your sales team more to work.
+
+                </h2>
+                <p class="text-16 md:text-18 text-gray-300 mb-10 leading-relaxed max-w-4xl">
+                    See how Sightro brings intelligent engagement to your real estate website while delivering
+                    actionable insights to your sales team.
+
+
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4">
+                    <a href="contact.html"
+                        class="inline-flex justify-center items-center px-8 py-4 bg-brass-gold-500 hover:bg-brass-gold-600 hover:-translate-y-1 text-ink-navy-900 font-semibold rounded-full transition-all duration-300 shadow-lg text-16 md:text-18">
+                        Book a Demo
+                    </a>
+                    <a href="contact.html"
+                        class="inline-flex justify-center items-center px-8 py-4 bg-transparent border border-gray-400 hover:border-white hover:-translate-y-1 text-white font-medium rounded-full transition-all duration-300 shadow-lg text-16 md:text-18">
+                        Speak to the Expert
+                    </a>
+                </div>
+            </div>
+
+
+        </div>
+    </section>
+    <!-- <section class="bg-ink-navy-900 py-16 md:py-20 lg:py-24 px-6 md:px-8 text-white">
         <div class="max-w-7xl mx-auto">
+
             <div class="text-brass-gold-500 text-12 font-bold uppercase tracking-wide mb-4">TURN YOUR WEBSITE INTO A
                 SALES INTELLIGENCE CHANNEL
             </div>
@@ -566,8 +618,9 @@
                     </button>
                 </a>
             </div>
+
         </div>
-    </section>
+    </section> -->
 
     <!-- Footer -->
     <footer class="bg-brand-darker py-16 px-6">
